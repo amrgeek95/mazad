@@ -7,6 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0293C918A6FB5685807ABA7E /* Pods_MazadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FAF6F17974B1921A5AADB7 /* Pods_MazadUITests.framework */; };
+		2F05FD522094D9650005FB42 /* contactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F05FD512094D9650005FB42 /* contactViewController.swift */; };
+		2F414F082099EAA400B8AD12 /* likeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F414F072099EAA400B8AD12 /* likeTableViewCell.swift */; };
+		2F414F0A2099ECA700B8AD12 /* newsTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F414F092099ECA700B8AD12 /* newsTitleTableViewCell.swift */; };
+		2F414F0C2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F414F0B2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift */; };
+		2F41C3C42095F459007AA346 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3C32095F459007AA346 /* ProductViewController.swift */; };
+		2F41C3C62095F48E007AA346 /* titleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3C52095F48E007AA346 /* titleTableViewCell.swift */; };
+		2F41C3C82095F4C8007AA346 /* informationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3C72095F4C8007AA346 /* informationTableViewCell.swift */; };
+		2F41C3CA2095F4F2007AA346 /* imageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3C92095F4F2007AA346 /* imageTableViewCell.swift */; };
+		2F41C3CC2095F509007AA346 /* contactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3CB2095F509007AA346 /* contactTableViewCell.swift */; };
+		2F41C3CE20962B91007AA346 /* commentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3CD20962B91007AA346 /* commentTableViewCell.swift */; };
+		2F41C3D020962BC3007AA346 /* addCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3CF20962BC3007AA346 /* addCommentTableViewCell.swift */; };
+		2F41C3D220965C2F007AA346 /* settingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3D120965C2F007AA346 /* settingTableViewCell.swift */; };
+		2F41C3D4209664A4007AA346 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41C3D3209664A4007AA346 /* settingViewController.swift */; };
+		2F58884520A2293100E7E4B3 /* editProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F58884420A2293000E7E4B3 /* editProfileViewController.swift */; };
+		2F5ED37F2090D76200E4B829 /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED37E2090D76200E4B829 /* menuTableViewCell.swift */; };
+		2F5ED3822090E0FC00E4B829 /* Reachiblity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED3802090E0FC00E4B829 /* Reachiblity.swift */; };
+		2F5ED3832090E0FC00E4B829 /* Utitlites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED3812090E0FC00E4B829 /* Utitlites.swift */; };
+		2F5ED3852090E33D00E4B829 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED3842090E33D00E4B829 /* Global.swift */; };
+		2F5ED3872090E90B00E4B829 /* splashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED3862090E90B00E4B829 /* splashScreenViewController.swift */; };
+		2F5ED3892090E92F00E4B829 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED3882090E92F00E4B829 /* homeViewController.swift */; };
+		2F5ED38C20910F0A00E4B829 /* productTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED38A20910F0A00E4B829 /* productTableViewCell.swift */; };
+		2F5ED38D20910F0A00E4B829 /* productTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5ED38B20910F0A00E4B829 /* productTableViewCell.xib */; };
+		2F5ED38F209110A700E4B829 /* addProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED38E209110A700E4B829 /* addProductViewController.swift */; };
+		2F5ED391209110B700E4B829 /* categoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED390209110B700E4B829 /* categoriesViewController.swift */; };
+		2F5ED393209110C400E4B829 /* listNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED392209110C400E4B829 /* listNewsViewController.swift */; };
+		2F5ED396209110DA00E4B829 /* newsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5ED395209110DA00E4B829 /* newsViewController.swift */; };
+		2F74E60520A1493600AFA1A7 /* usersChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74E60420A1493600AFA1A7 /* usersChatTableViewCell.swift */; };
+		2F74E60720A1495400AFA1A7 /* usersChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74E60620A1495400AFA1A7 /* usersChatViewController.swift */; };
+		2F8FD10F20A0C80D0039F3DA /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8FD10D20A0C80D0039F3DA /* chatViewController.swift */; };
+		2F8FD11020A0C80D0039F3DA /* parentChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8FD10E20A0C80D0039F3DA /* parentChatViewController.swift */; };
+		2F9727C9209FE79B0082C11E /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9727C8209FE79B0082C11E /* GlobalVariables.swift */; };
+		2F9A73C02091E85F003649D7 /* newsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A73BF2091E85F003649D7 /* newsTableViewCell.swift */; };
+		2F9A73C22091EA58003649D7 /* categoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A73C12091EA58003649D7 /* categoriesTableViewCell.swift */; };
+		2F9A73C42091F6B5003649D7 /* newProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A73C32091F6B5003649D7 /* newProductTableViewCell.swift */; };
+		2F9B043720937022000F7E86 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B043620937022000F7E86 /* mainViewController.swift */; };
+		2F9B04392093713E000F7E86 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B04382093713E000F7E86 /* searchViewController.swift */; };
+		2FA267C220A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */; };
+		2FA267C320A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */; };
+		2FA267C420A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */; };
+		2FA267C520A2ACBD0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BF20A2ACBC0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi-Bold.ttf */; };
+		2FA267C620A2ACBD0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267C020A2ACBC0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi.ttf */; };
+		2FA267C720A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267C120A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR_.ttf */; };
+		2FB7FEE02091DA4400B39CFC /* preLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7FEDF2091DA4400B39CFC /* preLoginViewController.swift */; };
 		2FC702222090A5CD00D1E92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC702212090A5CD00D1E92A /* AppDelegate.swift */; };
 		2FC702242090A5CD00D1E92A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC702232090A5CD00D1E92A /* ViewController.swift */; };
 		2FC702272090A5CD00D1E92A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FC702252090A5CD00D1E92A /* Main.storyboard */; };
@@ -15,6 +59,17 @@
 		2FC7022F2090A5CD00D1E92A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7022D2090A5CD00D1E92A /* LaunchScreen.storyboard */; };
 		2FC7023A2090A5CD00D1E92A /* MazadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC702392090A5CD00D1E92A /* MazadTests.swift */; };
 		2FC702452090A5CD00D1E92A /* MazadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC702442090A5CD00D1E92A /* MazadUITests.swift */; };
+		2FC702552090D31E00D1E92A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC702542090D31D00D1E92A /* SWRevealViewController.m */; };
+		2FC702602090D3C500D1E92A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025A2090D3C500D1E92A /* LoginViewController.swift */; };
+		2FC702612090D3C500D1E92A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025B2090D3C500D1E92A /* SignUpViewController.swift */; };
+		2FC702622090D3C500D1E92A /* SuperParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025C2090D3C500D1E92A /* SuperParentViewController.swift */; };
+		2FC702632090D3C500D1E92A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025D2090D3C500D1E92A /* MenuController.swift */; };
+		2FC702642090D3C500D1E92A /* SuperParentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */; };
+		2FC702652090D3C500D1E92A /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025F2090D3C500D1E92A /* navigationController.swift */; };
+		2FE363A2209BE29A001639A6 /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE363A1209BE299001639A6 /* ExamplePhoto.swift */; };
+		2FF91F202092676B00E97821 /* mainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF91F1F2092676B00E97821 /* mainTabBarController.swift */; };
+		E50A24A549DCA49A7A9AB30C /* Pods_MazadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58792A8F276F3D7EBD82AA22 /* Pods_MazadTests.framework */; };
+		F3745CB1663D03040E14F3BB /* Pods_Mazad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2EEDFF2F8807707B22E3A /* Pods_Mazad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +90,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E4691E5488D91066808019B /* Pods-Mazad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mazad/Pods-Mazad.release.xcconfig"; sourceTree = "<group>"; };
+		2F05FD512094D9650005FB42 /* contactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactViewController.swift; sourceTree = "<group>"; };
+		2F414F072099EAA400B8AD12 /* likeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeTableViewCell.swift; sourceTree = "<group>"; };
+		2F414F092099ECA700B8AD12 /* newsTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsTitleTableViewCell.swift; sourceTree = "<group>"; };
+		2F414F0B2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bodyNewsTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3C32095F459007AA346 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		2F41C3C52095F48E007AA346 /* titleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3C72095F4C8007AA346 /* informationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = informationTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3C92095F4F2007AA346 /* imageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3CB2095F509007AA346 /* contactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3CD20962B91007AA346 /* commentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3CF20962BC3007AA346 /* addCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCommentTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3D120965C2F007AA346 /* settingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingTableViewCell.swift; sourceTree = "<group>"; };
+		2F41C3D3209664A4007AA346 /* settingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		2F58884420A2293000E7E4B3 /* editProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editProfileViewController.swift; sourceTree = "<group>"; };
+		2F5ED37E2090D76200E4B829 /* menuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
+		2F5ED3802090E0FC00E4B829 /* Reachiblity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachiblity.swift; sourceTree = "<group>"; };
+		2F5ED3812090E0FC00E4B829 /* Utitlites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utitlites.swift; sourceTree = "<group>"; };
+		2F5ED3842090E33D00E4B829 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		2F5ED3862090E90B00E4B829 /* splashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashScreenViewController.swift; sourceTree = "<group>"; };
+		2F5ED3882090E92F00E4B829 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		2F5ED38A20910F0A00E4B829 /* productTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productTableViewCell.swift; sourceTree = "<group>"; };
+		2F5ED38B20910F0A00E4B829 /* productTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = productTableViewCell.xib; sourceTree = "<group>"; };
+		2F5ED38E209110A700E4B829 /* addProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addProductViewController.swift; sourceTree = "<group>"; };
+		2F5ED390209110B700E4B829 /* categoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesViewController.swift; sourceTree = "<group>"; };
+		2F5ED392209110C400E4B829 /* listNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listNewsViewController.swift; sourceTree = "<group>"; };
+		2F5ED395209110DA00E4B829 /* newsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsViewController.swift; sourceTree = "<group>"; };
+		2F74E60420A1493600AFA1A7 /* usersChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = usersChatTableViewCell.swift; sourceTree = "<group>"; };
+		2F74E60620A1495400AFA1A7 /* usersChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = usersChatViewController.swift; sourceTree = "<group>"; };
+		2F8FD10D20A0C80D0039F3DA /* chatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
+		2F8FD10E20A0C80D0039F3DA /* parentChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parentChatViewController.swift; sourceTree = "<group>"; };
+		2F9727C8209FE79B0082C11E /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		2F9A73BF2091E85F003649D7 /* newsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsTableViewCell.swift; sourceTree = "<group>"; };
+		2F9A73C12091EA58003649D7 /* categoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesTableViewCell.swift; sourceTree = "<group>"; };
+		2F9A73C32091F6B5003649D7 /* newProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newProductTableViewCell.swift; sourceTree = "<group>"; };
+		2F9B043620937022000F7E86 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		2F9B04382093713E000F7E86 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf"; sourceTree = "<group>"; };
+		2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid Arabic Kufi.ttf"; sourceTree = "<group>"; };
+		2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid Arabic Kufi Bold.ttf"; sourceTree = "<group>"; };
+		2FA267BF20A2ACBC0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid-Arabic-Kufi-Bold.ttf"; sourceTree = "<group>"; };
+		2FA267C020A2ACBC0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid-Arabic-Kufi.ttf"; sourceTree = "<group>"; };
+		2FA267C120A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR_.ttf"; sourceTree = "<group>"; };
+		2FB7FEDF2091DA4400B39CFC /* preLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preLoginViewController.swift; sourceTree = "<group>"; };
 		2FC7021E2090A5CD00D1E92A /* Mazad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC702212090A5CD00D1E92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FC702232090A5CD00D1E92A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +148,25 @@
 		2FC702402090A5CD00D1E92A /* MazadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC702442090A5CD00D1E92A /* MazadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazadUITests.swift; sourceTree = "<group>"; };
 		2FC702462090A5CD00D1E92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FC702522090D31C00D1E92A /* Mazad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mazad-Bridging-Header.h"; sourceTree = "<group>"; };
+		2FC702532090D31D00D1E92A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2FC702542090D31D00D1E92A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2FC7025A2090D3C500D1E92A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2FC7025B2090D3C500D1E92A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2FC7025C2090D3C500D1E92A /* SuperParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperParentViewController.swift; sourceTree = "<group>"; };
+		2FC7025D2090D3C500D1E92A /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperParentTableViewController.swift; sourceTree = "<group>"; };
+		2FC7025F2090D3C500D1E92A /* navigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
+		2FE363A1209BE299001639A6 /* ExamplePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePhoto.swift; sourceTree = "<group>"; };
+		2FF91F1F2092676B00E97821 /* mainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarController.swift; sourceTree = "<group>"; };
+		4ED6987077851413C58925C0 /* Pods-Mazad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mazad/Pods-Mazad.debug.xcconfig"; sourceTree = "<group>"; };
+		58792A8F276F3D7EBD82AA22 /* Pods_MazadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MazadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB2EEDFF2F8807707B22E3A /* Pods_Mazad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0D36955E574C96ECB6E85A /* Pods-MazadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MazadTests/Pods-MazadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC2CD2A5C1BCD542A73029A6 /* Pods-MazadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MazadUITests/Pods-MazadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2A908AADB2454AC6B7D7529 /* Pods-MazadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MazadTests/Pods-MazadTests.release.xcconfig"; sourceTree = "<group>"; };
+		F2DB90A77D7AB95E4C6FE479 /* Pods-MazadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MazadUITests/Pods-MazadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3FAF6F17974B1921A5AADB7 /* Pods_MazadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MazadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3745CB1663D03040E14F3BB /* Pods_Mazad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50A24A549DCA49A7A9AB30C /* Pods_MazadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +190,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0293C918A6FB5685807ABA7E /* Pods_MazadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FA267BB20A2AC970066CCA4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */,
+				2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */,
+				2FA267BF20A2ACBC0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi-Bold.ttf */,
+				2FA267C020A2ACBC0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi.ttf */,
+				2FA267C120A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR_.ttf */,
+				2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2FC702152090A5CD00D1E92A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +217,8 @@
 				2FC702382090A5CD00D1E92A /* MazadTests */,
 				2FC702432090A5CD00D1E92A /* MazadUITests */,
 				2FC7021F2090A5CD00D1E92A /* Products */,
+				A681522CBDC6D271CA480B0F /* Pods */,
+				34FF2F0996FEB0133CFA891C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +235,13 @@
 		2FC702202090A5CD00D1E92A /* Mazad */ = {
 			isa = PBXGroup;
 			children = (
+				2FA267BB20A2AC970066CCA4 /* Fonts */,
+				2FC702592090D36B00D1E92A /* View */,
+				2FC702582090D36500D1E92A /* Helper */,
+				2FC702572090D36000D1E92A /* Model */,
+				2FC702562090D35400D1E92A /* Controller */,
+				2FC702532090D31D00D1E92A /* SWRevealViewController.h */,
+				2FC702542090D31D00D1E92A /* SWRevealViewController.m */,
 				2FC702212090A5CD00D1E92A /* AppDelegate.swift */,
 				2FC702232090A5CD00D1E92A /* ViewController.swift */,
 				2FC702252090A5CD00D1E92A /* Main.storyboard */,
@@ -106,6 +249,7 @@
 				2FC7022D2090A5CD00D1E92A /* LaunchScreen.storyboard */,
 				2FC702302090A5CD00D1E92A /* Info.plist */,
 				2FC702282090A5CD00D1E92A /* Mazad.xcdatamodeld */,
+				2FC702522090D31C00D1E92A /* Mazad-Bridging-Header.h */,
 			);
 			path = Mazad;
 			sourceTree = "<group>";
@@ -128,6 +272,102 @@
 			path = MazadUITests;
 			sourceTree = "<group>";
 		};
+		2FC702562090D35400D1E92A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F58884420A2293000E7E4B3 /* editProfileViewController.swift */,
+				2F74E60620A1495400AFA1A7 /* usersChatViewController.swift */,
+				2F8FD10D20A0C80D0039F3DA /* chatViewController.swift */,
+				2F8FD10E20A0C80D0039F3DA /* parentChatViewController.swift */,
+				2F5ED38E209110A700E4B829 /* addProductViewController.swift */,
+				2F5ED390209110B700E4B829 /* categoriesViewController.swift */,
+				2F05FD512094D9650005FB42 /* contactViewController.swift */,
+				2F5ED3882090E92F00E4B829 /* homeViewController.swift */,
+				2F5ED392209110C400E4B829 /* listNewsViewController.swift */,
+				2FC7025A2090D3C500D1E92A /* LoginViewController.swift */,
+				2FF91F1F2092676B00E97821 /* mainTabBarController.swift */,
+				2F9B043620937022000F7E86 /* mainViewController.swift */,
+				2FC7025D2090D3C500D1E92A /* MenuController.swift */,
+				2FC7025F2090D3C500D1E92A /* navigationController.swift */,
+				2F5ED395209110DA00E4B829 /* newsViewController.swift */,
+				2FB7FEDF2091DA4400B39CFC /* preLoginViewController.swift */,
+				2F41C3C32095F459007AA346 /* ProductViewController.swift */,
+				2F9B04382093713E000F7E86 /* searchViewController.swift */,
+				2F41C3D3209664A4007AA346 /* settingViewController.swift */,
+				2FC7025B2090D3C500D1E92A /* SignUpViewController.swift */,
+				2F5ED3862090E90B00E4B829 /* splashScreenViewController.swift */,
+				2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */,
+				2FC7025C2090D3C500D1E92A /* SuperParentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2FC702572090D36000D1E92A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F5ED3842090E33D00E4B829 /* Global.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FC702582090D36500D1E92A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2FE363A1209BE299001639A6 /* ExamplePhoto.swift */,
+				2F5ED3802090E0FC00E4B829 /* Reachiblity.swift */,
+				2F5ED3812090E0FC00E4B829 /* Utitlites.swift */,
+				2F9727C8209FE79B0082C11E /* GlobalVariables.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2FC702592090D36B00D1E92A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F41C3CF20962BC3007AA346 /* addCommentTableViewCell.swift */,
+				2F414F0B2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift */,
+				2F9A73C12091EA58003649D7 /* categoriesTableViewCell.swift */,
+				2F41C3CD20962B91007AA346 /* commentTableViewCell.swift */,
+				2F41C3CB2095F509007AA346 /* contactTableViewCell.swift */,
+				2F41C3C92095F4F2007AA346 /* imageTableViewCell.swift */,
+				2F41C3C72095F4C8007AA346 /* informationTableViewCell.swift */,
+				2F414F072099EAA400B8AD12 /* likeTableViewCell.swift */,
+				2F5ED37E2090D76200E4B829 /* menuTableViewCell.swift */,
+				2F9A73C32091F6B5003649D7 /* newProductTableViewCell.swift */,
+				2F9A73BF2091E85F003649D7 /* newsTableViewCell.swift */,
+				2F414F092099ECA700B8AD12 /* newsTitleTableViewCell.swift */,
+				2F5ED38A20910F0A00E4B829 /* productTableViewCell.swift */,
+				2F5ED38B20910F0A00E4B829 /* productTableViewCell.xib */,
+				2F41C3D120965C2F007AA346 /* settingTableViewCell.swift */,
+				2F41C3C52095F48E007AA346 /* titleTableViewCell.swift */,
+				2F74E60420A1493600AFA1A7 /* usersChatTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34FF2F0996FEB0133CFA891C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2EEDFF2F8807707B22E3A /* Pods_Mazad.framework */,
+				58792A8F276F3D7EBD82AA22 /* Pods_MazadTests.framework */,
+				F3FAF6F17974B1921A5AADB7 /* Pods_MazadUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A681522CBDC6D271CA480B0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4ED6987077851413C58925C0 /* Pods-Mazad.debug.xcconfig */,
+				2E4691E5488D91066808019B /* Pods-Mazad.release.xcconfig */,
+				DA0D36955E574C96ECB6E85A /* Pods-MazadTests.debug.xcconfig */,
+				E2A908AADB2454AC6B7D7529 /* Pods-MazadTests.release.xcconfig */,
+				F2DB90A77D7AB95E4C6FE479 /* Pods-MazadUITests.debug.xcconfig */,
+				DC2CD2A5C1BCD542A73029A6 /* Pods-MazadUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +375,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FC702492090A5CD00D1E92A /* Build configuration list for PBXNativeTarget "Mazad" */;
 			buildPhases = (
+				C3DAB1DA59D959471F431AFB /* [CP] Check Pods Manifest.lock */,
 				2FC7021A2090A5CD00D1E92A /* Sources */,
 				2FC7021B2090A5CD00D1E92A /* Frameworks */,
 				2FC7021C2090A5CD00D1E92A /* Resources */,
+				CF0C82635F4A8C0091300AD9 /* [CP] Embed Pods Frameworks */,
+				2115D287422D3B73B384B472 /* [CP] Copy Pods Resources */,
+				2FFAC292209A9CCE00BBF733 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -152,9 +396,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FC7024C2090A5CD00D1E92A /* Build configuration list for PBXNativeTarget "MazadTests" */;
 			buildPhases = (
+				0F9E14121CCD6DDF244C541B /* [CP] Check Pods Manifest.lock */,
 				2FC702312090A5CD00D1E92A /* Sources */,
 				2FC702322090A5CD00D1E92A /* Frameworks */,
 				2FC702332090A5CD00D1E92A /* Resources */,
+				9B03C6E211F64A2581CC4E4B /* [CP] Embed Pods Frameworks */,
+				5CB1FBE6385614B9CA60D40A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +417,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FC7024F2090A5CD00D1E92A /* Build configuration list for PBXNativeTarget "MazadUITests" */;
 			buildPhases = (
+				B3BF125B393A66BD95A74512 /* [CP] Check Pods Manifest.lock */,
 				2FC7023C2090A5CD00D1E92A /* Sources */,
 				2FC7023D2090A5CD00D1E92A /* Frameworks */,
 				2FC7023E2090A5CD00D1E92A /* Resources */,
+				930396D62FCD728138368924 /* [CP] Embed Pods Frameworks */,
+				20CCE443D297FD98BECE6F9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +446,7 @@
 				TargetAttributes = {
 					2FC7021D2090A5CD00D1E92A = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					2FC702342090A5CD00D1E92A = {
@@ -235,9 +486,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA267C720A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR_.ttf in Resources */,
 				2FC7022F2090A5CD00D1E92A /* LaunchScreen.storyboard in Resources */,
+				2F5ED38D20910F0A00E4B829 /* productTableViewCell.xib in Resources */,
+				2FA267C620A2ACBD0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi.ttf in Resources */,
 				2FC7022C2090A5CD00D1E92A /* Assets.xcassets in Resources */,
+				2FA267C220A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf in Resources */,
+				2FA267C420A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf in Resources */,
 				2FC702272090A5CD00D1E92A /* Main.storyboard in Resources */,
+				2FA267C520A2ACBD0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi-Bold.ttf in Resources */,
+				2FA267C320A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +515,210 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F9E14121CCD6DDF244C541B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		20CCE443D297FD98BECE6F9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadUITests/Pods-MazadUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2115D287422D3B73B384B472 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mazad/Pods-Mazad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FFAC292209A9CCE00BBF733 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		5CB1FBE6385614B9CA60D40A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadTests/Pods-MazadTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		930396D62FCD728138368924 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadUITests/Pods-MazadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B03C6E211F64A2581CC4E4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadTests/Pods-MazadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3BF125B393A66BD95A74512 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3DAB1DA59D959471F431AFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF0C82635F4A8C0091300AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mazad/Pods-Mazad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2FC7021A2090A5CD00D1E92A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9A73C02091E85F003649D7 /* newsTableViewCell.swift in Sources */,
+				2F414F0A2099ECA700B8AD12 /* newsTitleTableViewCell.swift in Sources */,
+				2F9A73C42091F6B5003649D7 /* newProductTableViewCell.swift in Sources */,
+				2F41C3C82095F4C8007AA346 /* informationTableViewCell.swift in Sources */,
+				2F41C3CE20962B91007AA346 /* commentTableViewCell.swift in Sources */,
+				2F8FD11020A0C80D0039F3DA /* parentChatViewController.swift in Sources */,
+				2F9A73C22091EA58003649D7 /* categoriesTableViewCell.swift in Sources */,
+				2F41C3D4209664A4007AA346 /* settingViewController.swift in Sources */,
+				2FE363A2209BE29A001639A6 /* ExamplePhoto.swift in Sources */,
+				2F5ED391209110B700E4B829 /* categoriesViewController.swift in Sources */,
+				2FC702632090D3C500D1E92A /* MenuController.swift in Sources */,
+				2FC702642090D3C500D1E92A /* SuperParentTableViewController.swift in Sources */,
+				2FC702612090D3C500D1E92A /* SignUpViewController.swift in Sources */,
+				2F41C3CC2095F509007AA346 /* contactTableViewCell.swift in Sources */,
+				2FC702652090D3C500D1E92A /* navigationController.swift in Sources */,
+				2F8FD10F20A0C80D0039F3DA /* chatViewController.swift in Sources */,
 				2FC7022A2090A5CD00D1E92A /* Mazad.xcdatamodeld in Sources */,
+				2F5ED3872090E90B00E4B829 /* splashScreenViewController.swift in Sources */,
+				2F5ED393209110C400E4B829 /* listNewsViewController.swift in Sources */,
 				2FC702242090A5CD00D1E92A /* ViewController.swift in Sources */,
+				2F414F0C2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift in Sources */,
+				2F5ED3852090E33D00E4B829 /* Global.swift in Sources */,
+				2F5ED37F2090D76200E4B829 /* menuTableViewCell.swift in Sources */,
+				2F9B04392093713E000F7E86 /* searchViewController.swift in Sources */,
+				2FF91F202092676B00E97821 /* mainTabBarController.swift in Sources */,
+				2F414F082099EAA400B8AD12 /* likeTableViewCell.swift in Sources */,
+				2F41C3D020962BC3007AA346 /* addCommentTableViewCell.swift in Sources */,
 				2FC702222090A5CD00D1E92A /* AppDelegate.swift in Sources */,
+				2F9B043720937022000F7E86 /* mainViewController.swift in Sources */,
+				2F41C3D220965C2F007AA346 /* settingTableViewCell.swift in Sources */,
+				2F41C3C42095F459007AA346 /* ProductViewController.swift in Sources */,
+				2F5ED3832090E0FC00E4B829 /* Utitlites.swift in Sources */,
+				2F58884520A2293100E7E4B3 /* editProfileViewController.swift in Sources */,
+				2F74E60520A1493600AFA1A7 /* usersChatTableViewCell.swift in Sources */,
+				2F5ED3892090E92F00E4B829 /* homeViewController.swift in Sources */,
+				2F41C3C62095F48E007AA346 /* titleTableViewCell.swift in Sources */,
+				2F74E60720A1495400AFA1A7 /* usersChatViewController.swift in Sources */,
+				2F9727C9209FE79B0082C11E /* GlobalVariables.swift in Sources */,
+				2FB7FEE02091DA4400B39CFC /* preLoginViewController.swift in Sources */,
+				2F5ED3822090E0FC00E4B829 /* Reachiblity.swift in Sources */,
+				2FC702602090D3C500D1E92A /* LoginViewController.swift in Sources */,
+				2F41C3CA2095F4F2007AA346 /* imageTableViewCell.swift in Sources */,
+				2F5ED38C20910F0A00E4B829 /* productTableViewCell.swift in Sources */,
+				2FC702552090D31E00D1E92A /* SWRevealViewController.m in Sources */,
+				2F5ED38F209110A700E4B829 /* addProductViewController.swift in Sources */,
+				2FC702622090D3C500D1E92A /* SuperParentViewController.swift in Sources */,
+				2F5ED396209110DA00E4B829 /* newsViewController.swift in Sources */,
+				2F05FD522094D9650005FB42 /* contactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,34 +882,54 @@
 		};
 		2FC7024A2090A5CD00D1E92A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ED6987077851413C58925C0 /* Pods-Mazad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S32NA7S358;
+				FRAMEWORK_SEARCH_PATHS = " $(inherited)";
 				INFOPLIST_FILE = Mazad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = amr.Mazad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mazad/Mazad-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2FC7024B2090A5CD00D1E92A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4691E5488D91066808019B /* Pods-Mazad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S32NA7S358;
+				FRAMEWORK_SEARCH_PATHS = " $(inherited)";
 				INFOPLIST_FILE = Mazad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = amr.Mazad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mazad/Mazad-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		2FC7024D2090A5CD00D1E92A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0D36955E574C96ECB6E85A /* Pods-MazadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +946,7 @@
 		};
 		2FC7024E2090A5CD00D1E92A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2A908AADB2454AC6B7D7529 /* Pods-MazadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +963,7 @@
 		};
 		2FC702502090A5CD00D1E92A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DB90A77D7AB95E4C6FE479 /* Pods-MazadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +979,7 @@
 		};
 		2FC702512090A5CD00D1E92A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC2CD2A5C1BCD542A73029A6 /* Pods-MazadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
