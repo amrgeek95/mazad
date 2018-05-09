@@ -1,0 +1,6 @@
+framework module Pods_MazadUITests {
+  umbrella header "Pods-MazadUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
