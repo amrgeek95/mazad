@@ -21,13 +21,6 @@ class imageTableViewCell: UITableViewCell , NYTPhotosViewControllerDelegate{
        // containerView.borderRound(border: 0.2, corner: 10)
     }
     func imageBtn(_ sender: Any) {
-        let photo = ExamplePhoto(image: img_url, imageData: imgData, attributedCaptionTitle: NSAttributedString(string: ""))
-        
-        photo.attributedCaptionSummary = NSAttributedString(string:
-            "image1", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
-        photo.attributedCaptionCredit = NSAttributedString(string:  "image2", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
-        let photosViewController = NYTPhotosViewController()
-        parent?.present(photosViewController, animated: true, completion: nil)
         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

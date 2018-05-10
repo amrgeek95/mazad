@@ -30,6 +30,7 @@ class SuperParentViewController: UIViewController {
         UILabel.appearance().substituteFontName = "DroidArabicKufi"; // USE YOUR FONT NAME INSTEAD
         UITextView.appearance().substituteFontName = "DroidArabicKufi"; // USE YOUR FONT NAME INSTEAD
         UITextField.appearance().substituteFontName = "DroidArabicKufi";
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

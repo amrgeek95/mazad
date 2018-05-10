@@ -81,13 +81,13 @@ class SignUpViewController: SuperParentViewController {
                         self.present(initialMain!, animated: true, completion: nil)
                     }
                 }else{
-                    toastView(messsage:"البريد الالكتروني مستخدم من قبل", view: self.view)
+                    toastView(messsage:results!["message"] as? String ?? "", view: self.view)
                 }
                 
                 
             }
         }else{
-            self.view.makeToast("Check Network Connection")
+            self.view.makeToast("يرجي التأكد من وجود شبكة ")
         }
        
     }
@@ -95,25 +95,30 @@ class SignUpViewController: SuperParentViewController {
         
         if name.isEmpty{
           
-            toastView(messsage: "Name IS Required", view: self.view)
+            toastView(messsage: "يجب كتابة اسم المستخدم", view: self.view)
             return false
         }
         if mobile.isEmpty{
-            toastView(messsage:"mobile Is Required", view: self.view)
+            toastView(messsage:"يجب كتابة رقم الجوال", view: self.view)
+            return false
+        }
+        
+        if mobile.characters.count != 10 {
+            toastView(messsage:"يرجي كتابة ١٠ ارقام صحيحة للجوال", view: self.view)
             return false
         }
         if email.isEmpty{
-            toastView(messsage:"Email is required", view: self.view)
+            toastView(messsage:"يرجي ادخال البريد الالكتروني", view: self.view)
             return false
         }else if !Utilities.isEmailValidation(email){
-            toastView(messsage:"Please Enter a valid email", view: self.view)
+            toastView(messsage:"ادخل البريد بطريقة صحيحة", view: self.view)
             return false
         }
         
        
         
         if password.isEmpty{
-            toastView(messsage:"Password Is required", view: self.view)
+            toastView(messsage:"يجب ادخال كلمة المرور", view: self.view)
             return false
         }
         
@@ -124,6 +129,11 @@ class SignUpViewController: SuperParentViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBOutlet weak var homeBack: UIButton!
+    @IBAction func homeAction(_ sender: Any) {
+        let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
+        self.present(initialMain!, animated: true, completion: nil)
     }
     
 

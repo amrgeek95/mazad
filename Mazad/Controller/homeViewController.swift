@@ -103,9 +103,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
         
         self.productTableView.backgroundView?.backgroundColor = UIColor.clear
         // Do any additional setup after loading the view.
-        productListArray = [["name":"name","image":"https://www.hyundai.com/content/dam/hyundai/ww/en/images/find-a-car/all-vehicles/i30-pd-5dr-quarter-view-stargazing-blue-pc.png","user":"abdalla","city":"cairo"],
-                            ["name":"name","image":"https://www.hyundai.com/content/dam/hyundai/ww/en/images/find-a-car/all-vehicles/i30-pd-5dr-quarter-view-stargazing-blue-pc.png","user":"abdalla","city":"cairo"],
-                            ["name":"name","image":"https://www.hyundai.com/content/dam/hyundai/ww/en/images/find-a-car/all-vehicles/i30-pd-5dr-quarter-view-stargazing-blue-pc.png","user":"abdalla","city":"cairo"]]
+ 
         let button =  UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         
@@ -139,6 +137,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
         self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#394044")
        
         self.navigationItem.title = "الرئيسية"
+        self.productListArray.removeAll()
         get_products()
         let button = UIButton(type: .system)
         if checkUserData() == true {

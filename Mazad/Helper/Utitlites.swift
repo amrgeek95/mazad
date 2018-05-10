@@ -184,6 +184,7 @@ extension UITextView {
 }
 
 extension UITextField {
+    
     public var substituteFontName : String {
         get {
             return self.font?.fontName ?? "";
@@ -200,7 +201,8 @@ extension UITextField {
             } else if fontNameToTest.range(of: "ultralight") != nil {
                 fontName += "-UltraLight";
             }
-            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 17)
+            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 14)
+            self.autocorrectionType = .no
         }
     }
 }
@@ -211,6 +213,7 @@ struct userModel {
     var userPassword : String = ""
    
 }
+
 extension NSURL {
     var fragments: [String: String] {
         var results = [String: String]()

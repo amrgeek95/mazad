@@ -28,9 +28,7 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         newsData  = ["date":"1 min ago",
                         "title":"huyndai","body":"body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body","phone":"0101010001"
         ]
-        imageData = [["image":"https://www.hyundai.com/content/dam/hyundai/ww/en/images/find-a-car/all-vehicles/i30-pd-5dr-quarter-view-stargazing-blue-pc.png"],
-                     ["image":"https://imgd.aeplcdn.com/1280x720/cw/ec/20227/BMW-X1-Right-Front-Three-Quarter-65929.jpg?v=20160402105618&t=105618180&t=105618180&q=100"]
-        ]
+     
         var like = ""
         var dislike = ""
         self.newsTableView.separatorStyle = .none
@@ -39,16 +37,20 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         
         newsTableView.rowHeight = UITableViewAutomaticDimension
         get_news()
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 2 {
+            return imageData.count
+        }
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 50
+              return UITableViewAutomaticDimension
         } else if indexPath.section == 1 {
             return UITableViewAutomaticDimension
         }
@@ -139,12 +141,39 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
                         if let news_data = results["news"] as? [String:AnyObject] {
                             print(news_data)
                             self.newsData = news_data
-                            self.navigationItem.title = news_data["name"] as? String ?? ""
+                            let title = news_data["name"] as? String ?? ""
+                            let r = title.index(title.startIndex, offsetBy: 0)..<title.index(title.startIndex, offsetBy: 15)
+                            var result = title[r]
+                            
+                            // Access substring from range.
+                            if title.characters.count > 15 {
+                               result = title[r] + " ... " 
+                            }
+                           
+                            self.navigationItem.title = "\(result) " as String
                             print(results["like"])
                             print(results["dislike"])
                             self.newsData["like"] = results["like"] as? Int ?? 0
                             self.newsData["dislike"] = results["dislike"] as? Int ?? 0
-                           
+                            self.imageData.removeAll()
+                            for str in (self.newsData["images"] as? NSArray)! {
+                                print(str)
+                                var each_list = [String:AnyObject]()
+                                var url_image = str as?  String ?? ""
+                                if url_image != ""{
+                                    
+                                    var base_url  = results["base_url"] as?  String ?? ""
+                                    url_image = "\(base_url)\(str)"
+                                    print(url_image)
+                                    
+                                }else{
+                                    url_image  = ""
+                                }
+                                
+                                each_list["image"] = url_image.replacingOccurrences(of: " ", with: "%20") as AnyObject
+                                self.imageData.append(each_list)
+                                
+                            }
                             self.newsTableView.reloadData()
                         }else{
                             

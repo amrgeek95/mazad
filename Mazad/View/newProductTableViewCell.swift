@@ -51,7 +51,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate{
     @IBAction func imageAction(_ sender: Any) {
         let imagePickerController = ImagePickerController()
         imagePickerController.delegate = self
-        imagePickerController.imageLimit = 3
+        imagePickerController.imageLimit = 6
         self.parent.present(imagePickerController, animated: true, completion: nil)
     }
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){

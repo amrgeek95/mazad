@@ -14,7 +14,7 @@ import Toast
 import NYTPhotoViewer
 import Lightbox
 
-class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource {
+class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource ,LightboxControllerDismissalDelegate{
     var productData = [String:Any]()
     var imageData = [Dictionary<String,Any>]()
     var product_id = ""
@@ -59,16 +59,20 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         }
         else if indexPath.section ==  2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell") as? imageTableViewCell
+            print(imageData[indexPath.row]["image"] as! String)
             
             cell?.img.sd_setImage(with: URL(string: imageData[indexPath.row]["image"] as! String), placeholderImage: UIImage(named: "placeholder"))
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
-            if imagelightbox.count != imageData.count {
-                 imagelightbox.append(LightboxImage(imageURL: URL(string: imageData[indexPath.row]["image"] as! String)!))
+            if imageData[indexPath.row]["image"] as! String != "" {
+                if imagelightbox.count != imageData.count {
+                    imagelightbox.append(LightboxImage(imageURL: URL(string: imageData[indexPath.row]["image"] as! String)!))
+                    let tapImg = UITapGestureRecognizer(target:self,action: #selector(self.tapImg(_:)))
+                    cell?.img.addGestureRecognizer(tapImg)
+                    cell?.img.isUserInteractionEnabled = true
+                }
             }
            
-            let tapImg = UITapGestureRecognizer(target:self,action: #selector(self.tapImg(_:)))
-            cell?.img.addGestureRecognizer(tapImg)
-            cell?.img.isUserInteractionEnabled = true
+            
             cell?.containerView.borderRound(border: 1, corner: 40)
             
             cell?.img.layer.cornerRadius = 30
@@ -104,7 +108,7 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             cell?.topView.borderRound(border: 0.2, corner: 15)
             cell?.topView.dropShadow(color: UIColor.lightGray, opacity: 0.5, radius: 5)
             print(productData["favourite"])
-            
+            cell?.index = indexPath.row
             if productData["favourite"] as? Bool == true {
                 cell?.heartImg.image = UIImage(named:"heart_icon")
                 cell?.favourite = true
@@ -114,10 +118,19 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             }
             cell?.heartImg.isUserInteractionEnabled = true
             
-            
-          
             cell?.bottomView.borderRound(border: 0.2, corner: 15)
             cell?.bottomView.dropShadow(color: UIColor.lightGray, opacity: 0.5, radius: 5)
+            
+            cell?.messageLabel.isUserInteractionEnabled = true
+            cell?.messageImg.isUserInteractionEnabled = true
+            if checkUserData(){
+                if userData["id"] as? String  == productData["user_id"] as? String {
+                    cell?.messageLabel.isEnabled = false
+                    cell?.messageImg.isUserInteractionEnabled = false
+                }
+            }
+           
+           
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
             cell?.parent = self
             return cell!
@@ -145,14 +158,19 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         }
     }
     @IBOutlet weak var productTableView: UITableView!
+    func lightboxControllerWillDismiss(_ controller: LightboxController) {
+        self.navigationItem.leftBarButtonItem?.width = 100
+        self.productTableView.reloadData()
+    }
     func tapImg(_ sender:UITapGestureRecognizer){
         let controller = LightboxController(images: imagelightbox)
         
-        controller.dynamicBackground = true
+      //  controller.dynamicBackground = true
         
-       
+       LightboxConfig.CloseButton.text = "اغلاق"
         present(controller, animated: true, completion: nil)
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         productTableView.rowHeight = UITableViewAutomaticDimension
@@ -167,7 +185,10 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         get_product()
        
         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
-        
+     //   CGRect resizedFrame = myBarButtonItem.customView.frame;
+    //    resizedFrame.size.width = myNewWidth;
+       // self.navigationItem..customView.frame = resizedFrame;
+        self.navigationItem.leftBarButtonItem?.customView?.frame = CGRect(x: 0, y: 0, width: 100, height: (self.navigationController?.navigationBar.bounds.height)!)
     }
     override func viewWillDisappear(_ animated: Bool) {
         
@@ -204,12 +225,17 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
                             for str in (product_data["images"] as? NSArray)! {
                                 print(str)
                                 var each_list = [String:AnyObject]()
-                                
                                 var url_image = str as?  String ?? ""
-                                var base_url  = results["base_url"] as?  String ?? ""
-                                url_image = "\(base_url)\(str)"
-                                print(url_image)
-                                
+                                if url_image != ""{
+                                    
+                                    var base_url  = results["base_url"] as?  String ?? ""
+                                    url_image = "\(base_url)\(str)"
+                                    print(url_image)
+                                    
+                                }else{
+                                   url_image  = ""
+                                }
+                               
                                 each_list["image"] = url_image.replacingOccurrences(of: " ", with: "%20") as AnyObject
                                 self.imageData.append(each_list)
                                 

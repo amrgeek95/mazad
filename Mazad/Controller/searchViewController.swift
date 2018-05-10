@@ -31,6 +31,7 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         cell?.userLabel.text = productListArray[indexPath.row]["user"] as? String ?? ""
         // cell?.productImage.imag = productListArray[indexPath.row]["city"] as? String ?? ""
         // cell?.productImage.sd_setImage(with: productListArray[indexPath.row]["image"] as? String ?? "", placeholderImage: UIImage(named: "car_icon"))
+        cell?.favouriteIcon.isHidden = true
         
         cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "car_icon"))
         return cell!
@@ -56,6 +57,10 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        my_products = 0
+        filter_category = 0
+        add_product_flag = 0
+        my_favourites = 0
         mySearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 70))
         mySearchBar.delegate = self
         //   lazy var mySearchBar = UISearchBar(frame: CGRect.zero)

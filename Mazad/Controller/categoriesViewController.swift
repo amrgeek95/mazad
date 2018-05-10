@@ -29,8 +29,12 @@ class categoriesViewController: UIViewController ,UITableViewDataSource,UITableV
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        
-        self.navigationItem.title = " الاقسام "
+        if add_product_flag == 1 {
+        self.navigationItem.title = " اختر قسم الاعلان "
+        }else{
+          self.navigationItem.title = " الاقسام "
+        }
+      
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#394044")
         self.get_categories()
@@ -46,28 +50,13 @@ class categoriesViewController: UIViewController ,UITableViewDataSource,UITableV
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-        /*
-        if let checkData =  UserDefaults.standard.value(forKey: "add_product_flag") as? Bool  {
-            let addProduct = self.storyboard?.instantiateViewController(withIdentifier: "addProductView") as? addProductViewController
-            addProduct?.category_id = categoriesList[indexPath.row]["id"] as? String ?? ""
-            addProduct?.category_name = categoriesList[indexPath.row]["name"] as? String ?? ""
-            
-            self.navigationController?.pushViewController(addProduct!, animated: true)
-            removeSegue(name: "add_product_flag")
-        }else{
-            let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
-           
-            saveSegue(data: true, name:"filter_category",stingData : categoriesList[indexPath.row]["id"] as? String ?? "")
-            self.navigationController?.pushViewController(initialMain!, animated: true)
-        }
-        
-        */
+      
         if add_product_flag == 0 {
             let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
             global_category_id = categoriesList[indexPath.row]["id"] as? String ?? ""
             //saveSegue(data: true, name:"filter_category",stingData : categoriesList[indexPath.row]["id"] as? String ?? "")
-            self.navigationController?.pushViewController(initialMain!, animated: true)
+          //  self.navigationController?.pushViewController(initialMain!, animated: true)
+            self.present(initialMain!, animated: true, completion: nil)
         }else{
             global_category_id = ""
             let addProduct = self.storyboard?.instantiateViewController(withIdentifier: "addProductView") as? addProductViewController

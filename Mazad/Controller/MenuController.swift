@@ -78,7 +78,7 @@ class MenuController: UITableViewController ,SideMenuControllerDelegate{
         if checkUserData() {
             return menu_items.count
         }else{
-            return 7
+            return 8
         }
         
     }
@@ -90,6 +90,14 @@ class MenuController: UITableViewController ,SideMenuControllerDelegate{
         if indexPath.row == menu_items.count - 1 {
             cell.label.textColor  = UIColor.red
         }
+         if !checkUserData() {
+            if indexPath.row == 7 {
+                cell.img.image = UIImage(named:"login_menu")
+                cell.label.text = "تسجيل الدخول"
+                cell.label.textColor = UIColor(hexString:"#249C6B")
+            }
+         }
+       
         return cell
     }
     
@@ -109,6 +117,7 @@ class MenuController: UITableViewController ,SideMenuControllerDelegate{
                     add_product_flag = 1
                     
                 }else{
+                    
                     let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
                     self.present(initialMain!, animated: true, completion: nil)
                     
@@ -134,9 +143,14 @@ class MenuController: UITableViewController ,SideMenuControllerDelegate{
                 
             }
             if indexPath.row == 7 {
-                my_products = 1
-                
-                
+                if checkUserData(){
+                    
+                    my_products = 1
+                }else{
+                 
+                    let show = self.storyboard?.instantiateViewController(withIdentifier: "preLogin") as? preLoginViewController
+                   self.present(show!, animated: true, completion: nil)
+                }
             }
             if indexPath.row == 8 {
                 removeUserData()

@@ -23,7 +23,21 @@ class listNewsViewController: UIViewController ,UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as? newsTableViewCell
         cell?.dateLabel.text = newsList[indexPath.row]["data"] as? String ?? ""
-        cell?.titleBtn.setTitle(newsList[indexPath.row]["name"] as? String ?? "", for: .normal)
+        let title = newsList[indexPath.row]["name"] as? String ?? ""
+        var cut = 0
+        if title.characters.count < 30 {
+            cut = title.characters.count
+        }else{
+            cut = 30
+        }
+        let r = title.index(title.startIndex, offsetBy: 0)..<title.index(title.startIndex, offsetBy: cut)
+        var result = title[r]
+        
+        // Access substring from range.
+        if title.characters.count > 30 {
+            result = title[r] + " ... "
+        }
+        cell?.titleBtn.setTitle(result, for: .normal)
         cell?.categoryLabel.text = newsList[indexPath.row]["category"] as? String ?? ""
         
         cell?.img.sd_setImage(with: URL(string: newsList[indexPath.row]["image"] as! String), placeholderImage: UIImage(named: "car_icon"))

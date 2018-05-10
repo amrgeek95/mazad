@@ -17,6 +17,8 @@ class preLoginViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#394044")
+        self.tabBarController?.tabBar.isHidden = true
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

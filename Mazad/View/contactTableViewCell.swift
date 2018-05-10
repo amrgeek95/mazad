@@ -27,6 +27,7 @@ class contactTableViewCell: UITableViewCell {
     @IBOutlet weak var topView: UIView!
     
     @IBOutlet weak var bottomView: UIView!
+    var index:Int!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,13 +37,12 @@ class contactTableViewCell: UITableViewCell {
         let openChat = UITapGestureRecognizer(target:self,action:#selector(self.openChat(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
+        self.messageImg.addGestureRecognizer(openChat)
+        self.messageLabel.addGestureRecognizer(openChat)
         self.phoneLabel.addGestureRecognizer(mobileTap)
         self.heartImg.addGestureRecognizer(tapGesture)
         self.phoneLabel.isUserInteractionEnabled = true
-        self.messageImg.addGestureRecognizer(openChat)
-        self.messageLabel.addGestureRecognizer(openChat)
-        self.messageLabel.isUserInteractionEnabled = true
-        self.messageImg.isUserInteractionEnabled = true
+       
         
     }
     func openChat(_ sender:UITapGestureRecognizer) {
@@ -52,7 +52,7 @@ class contactTableViewCell: UITableViewCell {
         showChat?.otherName = self.parent.productData["user"] as? String ?? ""
         if checkUserData() {
             if self.parent.productData["user_id"] as? String == userData["id"] as? String {
-                Mazad.toastView(messsage: "يجب تسجيل الدخول اولا", view: self.parent.view)
+                Mazad.toastView(messsage: "لا يمكن ان تراسل نفسك", view: self.parent.view)
             }else{
                 self.parent.navigationController?.pushViewController(showChat!, animated: true)
             }
@@ -91,10 +91,14 @@ class contactTableViewCell: UITableViewCell {
                         if self.favourite == true {
                             self.heartImg.image = UIImage(named:"heart_product")
                             Mazad.toastView(messsage: "تم  المسح من المفضلة", view: self.parent.view)
+                           
+                            self.favourite = false
                             self.parent.productData["favourite"] = false
                         }else{
                             self.heartImg.image = UIImage(named:"heart_icon")
                             Mazad.toastView(messsage: "تم الاضافة الي المفضلة", view: self.parent.view)
+                         
+                            self.favourite = true
                             self.parent.productData["favourite"] = true
                         }
                         

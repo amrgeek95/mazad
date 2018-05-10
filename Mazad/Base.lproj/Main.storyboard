@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-Droid-Arabic-Kufi.ttf">
+        <array key="ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf">
             <string>DroidArabicKufi</string>
         </array>
         <array key="ArialRoundedMTBold.ttf">
@@ -449,7 +449,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="اكتب تعليق" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujL-EN-33B">
+                                                <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="right" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="اكتب تعليق" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujL-EN-33B">
                                                     <rect key="frame" x="28" y="16" width="319" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="7B0-V8-ESy"/>
@@ -731,14 +731,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم المستخدم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-OT-Ddy">
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم المستخدم او رقم الجوال" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-OT-Ddy">
                                 <rect key="frame" x="20" y="70" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mSY-vM-lai"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSL-Dd-AJ8">
                                 <rect key="frame" x="20" y="115" width="335" height="30"/>
@@ -777,6 +777,15 @@
                                     <segue destination="Ugg-DD-kCD" kind="show" id="2Qw-Zu-wJn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqc-7w-RSw">
+                                <rect key="frame" x="140" y="320" width="94" height="30"/>
+                                <state key="normal" title="الرجوع للرئيسية">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeAction:" destination="lA9-pY-vG1" eventType="touchUpInside" id="3WZ-mv-KdE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -785,8 +794,10 @@
                             <constraint firstItem="4B2-ZM-z56" firstAttribute="centerX" secondItem="GbZ-tC-pPf" secondAttribute="centerX" id="9Sp-d0-dy1"/>
                             <constraint firstItem="ZJN-s9-hJZ" firstAttribute="centerX" secondItem="GbZ-tC-pPf" secondAttribute="centerX" id="AQI-Vi-xmx"/>
                             <constraint firstItem="ZJN-s9-hJZ" firstAttribute="top" secondItem="4B2-ZM-z56" secondAttribute="bottom" constant="10" id="F1F-yF-3IQ"/>
+                            <constraint firstItem="sqc-7w-RSw" firstAttribute="top" secondItem="ZJN-s9-hJZ" secondAttribute="bottom" constant="15" id="FOJ-1q-AR6"/>
                             <constraint firstItem="vqA-Wg-bww" firstAttribute="top" secondItem="rSL-Dd-AJ8" secondAttribute="bottom" constant="25" id="FlW-Xr-UwO"/>
                             <constraint firstItem="zIv-ZT-mo2" firstAttribute="trailing" secondItem="YYF-OT-Ddy" secondAttribute="trailing" constant="20" id="IXc-ps-8Jd"/>
+                            <constraint firstItem="sqc-7w-RSw" firstAttribute="centerX" secondItem="ZJN-s9-hJZ" secondAttribute="centerX" id="Oln-jk-isY"/>
                             <constraint firstItem="YYF-OT-Ddy" firstAttribute="leading" secondItem="zIv-ZT-mo2" secondAttribute="leading" constant="20" id="SN8-4n-rNT"/>
                             <constraint firstItem="vqA-Wg-bww" firstAttribute="centerX" secondItem="GbZ-tC-pPf" secondAttribute="centerX" id="VDG-PS-WH0"/>
                             <constraint firstItem="rSL-Dd-AJ8" firstAttribute="leading" secondItem="YYF-OT-Ddy" secondAttribute="leading" id="cVx-gr-koa"/>
@@ -799,6 +810,7 @@
                     <navigationItem key="navigationItem" id="lQ2-IN-4Ep"/>
                     <connections>
                         <outlet property="emailText" destination="YYF-OT-Ddy" id="gvL-0e-jxN"/>
+                        <outlet property="homeBack" destination="sqc-7w-RSw" id="KW4-jt-dvX"/>
                         <outlet property="passwordText" destination="rSL-Dd-AJ8" id="OhD-I2-H14"/>
                         <outlet property="signBtn" destination="vqA-Wg-bww" id="azA-Sc-ymg"/>
                     </connections>
@@ -856,7 +868,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-QI-OYf">
-                                <rect key="frame" x="142.5" y="329" width="90" height="30"/>
+                                <rect key="frame" x="140.5" y="329" width="94" height="30"/>
                                 <state key="normal" title="تسجيل الدخول">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -864,19 +876,31 @@
                                     <segue destination="lA9-pY-vG1" kind="show" id="mzo-b8-f8Q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpF-hZ-vWI">
+                                <rect key="frame" x="140" y="374" width="94" height="30"/>
+                                <state key="normal" title="الرجوع للرئيسية">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeAction:" destination="Ugg-DD-kCD" eventType="touchUpInside" id="E5g-kL-MeI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J6R-QI-OYf" firstAttribute="top" secondItem="vKB-fo-54M" secondAttribute="bottom" constant="24" id="1NA-og-Gdp"/>
                             <constraint firstItem="9b3-LZ-eiu" firstAttribute="width" secondItem="RHv-W0-ODd" secondAttribute="width" id="2dA-Jk-xZT"/>
+                            <constraint firstItem="xpF-hZ-vWI" firstAttribute="top" secondItem="J6R-QI-OYf" secondAttribute="bottom" constant="15" id="2eA-HF-YqD"/>
                             <constraint firstItem="twS-is-Hj3" firstAttribute="height" secondItem="NaT-YW-LBG" secondAttribute="height" id="9PQ-dF-AbL"/>
                             <constraint firstItem="RHv-W0-ODd" firstAttribute="height" secondItem="twS-is-Hj3" secondAttribute="height" id="AV1-l6-T8Z"/>
                             <constraint firstItem="vKB-fo-54M" firstAttribute="width" secondItem="bEo-6D-KdO" secondAttribute="width" multiplier="0.5" id="DgN-ze-zhb"/>
+                            <constraint firstItem="xpF-hZ-vWI" firstAttribute="leading" secondItem="J6R-QI-OYf" secondAttribute="leading" id="F7c-eF-wEy"/>
                             <constraint firstItem="9b3-LZ-eiu" firstAttribute="leading" secondItem="RHv-W0-ODd" secondAttribute="leading" id="FJe-tl-aVz"/>
                             <constraint firstItem="X0T-hl-iqw" firstAttribute="trailing" secondItem="NaT-YW-LBG" secondAttribute="trailing" constant="20" id="J8S-YI-Elw"/>
                             <constraint firstItem="vKB-fo-54M" firstAttribute="top" secondItem="9b3-LZ-eiu" secondAttribute="bottom" constant="30" id="QY0-Kx-RQC"/>
                             <constraint firstItem="9b3-LZ-eiu" firstAttribute="top" secondItem="RHv-W0-ODd" secondAttribute="bottom" constant="20" id="S0H-kS-fPo"/>
                             <constraint firstItem="RHv-W0-ODd" firstAttribute="top" secondItem="twS-is-Hj3" secondAttribute="bottom" constant="20" id="Uql-ee-5xE"/>
+                            <constraint firstItem="xpF-hZ-vWI" firstAttribute="trailing" secondItem="J6R-QI-OYf" secondAttribute="trailing" id="XEG-fA-8gy"/>
                             <constraint firstItem="twS-is-Hj3" firstAttribute="width" secondItem="NaT-YW-LBG" secondAttribute="width" id="Y9V-Bi-fDU"/>
                             <constraint firstItem="RHv-W0-ODd" firstAttribute="width" secondItem="twS-is-Hj3" secondAttribute="width" id="ZFC-os-YYR"/>
                             <constraint firstItem="NaT-YW-LBG" firstAttribute="top" secondItem="X0T-hl-iqw" secondAttribute="top" constant="45" id="ZFq-gU-nhA"/>
@@ -891,6 +915,7 @@
                     </view>
                     <connections>
                         <outlet property="emailText" destination="twS-is-Hj3" id="vWz-GF-Tlk"/>
+                        <outlet property="homeBack" destination="xpF-hZ-vWI" id="Pgn-IE-UPH"/>
                         <outlet property="mobileText" destination="9b3-LZ-eiu" id="njR-ax-T9x"/>
                         <outlet property="nameText" destination="NaT-YW-LBG" id="cec-JN-i9T"/>
                         <outlet property="passwordText" destination="RHv-W0-ODd" id="USD-nF-FHB"/>
@@ -943,8 +968,8 @@
                                                             <color key="textColor" red="0.28166640230000001" green="0.28166640230000001" blue="0.28166640230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og6-vp-9pi">
-                                                            <rect key="frame" x="299" y="39" width="46" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og6-vp-9pi">
+                                                            <rect key="frame" x="95" y="39" width="250" height="30"/>
                                                             <state key="normal" title="Button">
                                                                 <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
@@ -977,6 +1002,7 @@
                                                         <constraint firstItem="sp9-3g-nYP" firstAttribute="trailing" secondItem="Og6-vp-9pi" secondAttribute="trailing" id="qjT-iO-Ypt"/>
                                                         <constraint firstAttribute="trailing" secondItem="riz-aB-oS6" secondAttribute="trailing" constant="5" id="rye-Gg-7iD"/>
                                                         <constraint firstItem="TZW-gH-ShX" firstAttribute="leading" secondItem="qGf-gp-AM7" secondAttribute="leading" constant="5" id="yf9-1K-alt"/>
+                                                        <constraint firstItem="Og6-vp-9pi" firstAttribute="leading" secondItem="TZW-gH-ShX" secondAttribute="trailing" constant="10" id="zl7-m0-0By"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

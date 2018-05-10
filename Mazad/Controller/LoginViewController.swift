@@ -43,6 +43,11 @@ class LoginViewController: SuperParentViewController {
     }
     
     
+    @IBOutlet weak var homeBack: UIButton!
+    @IBAction func homeAction(_ sender: Any) {
+        let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
+        self.present(initialMain!, animated: true, completion: nil)
+    }
     @IBAction func loginBtn(_ sender: Any) {
         var parameters = [String: Any]()
         
@@ -65,23 +70,24 @@ class LoginViewController: SuperParentViewController {
                             let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
                             self.present(initialMain!, animated: true, completion: nil)
                         }else{
-                            toastView(messsage:"Invalid Email Or Password", view: self.view)
+                            toastView(messsage:results["message"] as? String ?? "", view: self.view)
                         }
                     }else{
-                         toastView(messsage:"Invalid Email Or Password", view: self.view)
+                        toastView(messsage:results["message"] as? String ?? "", view: self.view)
                     }
                    
                 } else{
-                     toastView(messsage:"Invalid Email Or Password", view: self.view)
+                     toastView(messsage:"حدث خطأ", view: self.view)
                 }
             }else{
-                toastView(messsage:"Invalid Email Or Password", view: self.view)
+                toastView(messsage:"برجاء المحاولة مرة اخري", view: self.view)
             }
           
            
             
         }
     }
+   
     
     /*
     // MARK: - Navigation
