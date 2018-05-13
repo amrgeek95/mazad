@@ -44,8 +44,10 @@ class SignUpViewController: SuperParentViewController {
         mobileText.setBottomBorder()
         emailText.setBottomBorder()
         passwordText.setBottomBorder()
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
         
     }
+   
 
     @IBAction func signUpBtn(_ sender: Any) {
         var parameters = [String: Any]()

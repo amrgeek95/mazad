@@ -44,6 +44,9 @@
 		2F9A73C42091F6B5003649D7 /* newProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A73C32091F6B5003649D7 /* newProductTableViewCell.swift */; };
 		2F9B043720937022000F7E86 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B043620937022000F7E86 /* mainViewController.swift */; };
 		2F9B04392093713E000F7E86 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B04382093713E000F7E86 /* searchViewController.swift */; };
+		2FA1925620A7E21800F3B175 /* advancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */; };
+		2FA1925820A7E23100F3B175 /* advancedCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */; };
+		2FA1925A20A7E24D00F3B175 /* advancedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */; };
 		2FA267C220A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */; };
 		2FA267C320A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */; };
 		2FA267C420A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */; };
@@ -127,6 +130,9 @@
 		2F9A73C32091F6B5003649D7 /* newProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newProductTableViewCell.swift; sourceTree = "<group>"; };
 		2F9B043620937022000F7E86 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		2F9B04382093713E000F7E86 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedSearchViewController.swift; sourceTree = "<group>"; };
+		2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedCellTableViewCell.swift; sourceTree = "<group>"; };
+		2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf"; sourceTree = "<group>"; };
 		2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid Arabic Kufi.ttf"; sourceTree = "<group>"; };
 		2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid Arabic Kufi Bold.ttf"; sourceTree = "<group>"; };
@@ -298,6 +304,7 @@
 				2F5ED3862090E90B00E4B829 /* splashScreenViewController.swift */,
 				2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */,
 				2FC7025C2090D3C500D1E92A /* SuperParentViewController.swift */,
+				2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +348,8 @@
 				2F41C3D120965C2F007AA346 /* settingTableViewCell.swift */,
 				2F41C3C52095F48E007AA346 /* titleTableViewCell.swift */,
 				2F74E60420A1493600AFA1A7 /* usersChatTableViewCell.swift */,
+				2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */,
+				2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,6 +685,7 @@
 				2F9A73C42091F6B5003649D7 /* newProductTableViewCell.swift in Sources */,
 				2F41C3C82095F4C8007AA346 /* informationTableViewCell.swift in Sources */,
 				2F41C3CE20962B91007AA346 /* commentTableViewCell.swift in Sources */,
+				2FA1925820A7E23100F3B175 /* advancedCellTableViewCell.swift in Sources */,
 				2F8FD11020A0C80D0039F3DA /* parentChatViewController.swift in Sources */,
 				2F9A73C22091EA58003649D7 /* categoriesTableViewCell.swift in Sources */,
 				2F41C3D4209664A4007AA346 /* settingViewController.swift in Sources */,
@@ -683,6 +693,7 @@
 				2F5ED391209110B700E4B829 /* categoriesViewController.swift in Sources */,
 				2FC702632090D3C500D1E92A /* MenuController.swift in Sources */,
 				2FC702642090D3C500D1E92A /* SuperParentTableViewController.swift in Sources */,
+				2FA1925A20A7E24D00F3B175 /* advancedCollectionViewCell.swift in Sources */,
 				2FC702612090D3C500D1E92A /* SignUpViewController.swift in Sources */,
 				2F41C3CC2095F509007AA346 /* contactTableViewCell.swift in Sources */,
 				2FC702652090D3C500D1E92A /* navigationController.swift in Sources */,
@@ -705,6 +716,7 @@
 				2F5ED3832090E0FC00E4B829 /* Utitlites.swift in Sources */,
 				2F58884520A2293100E7E4B3 /* editProfileViewController.swift in Sources */,
 				2F74E60520A1493600AFA1A7 /* usersChatTableViewCell.swift in Sources */,
+				2FA1925620A7E21800F3B175 /* advancedSearchViewController.swift in Sources */,
 				2F5ED3892090E92F00E4B829 /* homeViewController.swift in Sources */,
 				2F41C3C62095F48E007AA346 /* titleTableViewCell.swift in Sources */,
 				2F74E60720A1495400AFA1A7 /* usersChatViewController.swift in Sources */,

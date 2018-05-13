@@ -15,9 +15,16 @@ class preLoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
+        self.tabBarController?.tabBar.isHidden = false
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#394044")
         self.tabBarController?.tabBar.isHidden = true
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
 
     }
     override func didReceiveMemoryWarning() {

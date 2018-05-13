@@ -33,7 +33,7 @@ class usersChatViewController: UIViewController,UITableViewDelegate ,UITableView
     {
         let closeAction = UIContextualAction(style: .normal, title:  "مسح", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("OK, marked as Closed")
-            self.deleteChat()
+            self.deleteChat(selectedChat: indexPath.row)
             success(true)
         })
         //closeAction.image = UIImage(named: "user_icon")
@@ -43,15 +43,32 @@ class usersChatViewController: UIViewController,UITableViewDelegate ,UITableView
         return UISwipeActionsConfiguration(actions: [closeAction])
         
     }
-    func deleteChat(){
+    func deleteChat(selectedChat:Int){
+        var parameters = [String:AnyObject]()
+        parameters["user_id"] = userData["id"] as AnyObject
+        parameters["chat_id"] = usersArray[selectedChat]["chat_id"] as AnyObject
+        print(parameters)
         
+        let delete_chat_url = base_url + "delete_chat"
+        Alamofire.request(delete_chat_url, method: .post, parameters: parameters).responseJSON{
+            (response) in
+            print(response)
+            if let results = response.result.value as? [String:AnyObject]{
+                if results["status"] as? Bool == true {
+                    Mazad.toastView(messsage: "تم المسح", view: self.view)
+                    self.usersArray.remove(at: selectedChat)
+                    self.usersTableView.reloadData()
+                }
+                
+            }
+        }
     }
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
         let closeAction = UIContextualAction(style: .normal, title:  "مسح", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("OK, marked as Closed")
-            self.deleteChat()
+            self.deleteChat(selectedChat: indexPath.row)
             success(true)
         })
         //closeAction.image = UIImage(named: "user_icon")

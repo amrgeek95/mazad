@@ -36,8 +36,12 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         self.navigationController?.navigationBar.layer.shadowRadius = 0
         
         newsTableView.rowHeight = UITableViewAutomaticDimension
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
         get_news()
         
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -84,6 +88,7 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
             let tapImg = UITapGestureRecognizer(target:self,action: #selector(self.tapImg(_:)))
             cell?.img.addGestureRecognizer(tapImg)
             cell?.img.isUserInteractionEnabled = true
+           
             cell?.containerView.borderRound(border: 1, corner: 40)
             
             cell?.img.layer.cornerRadius = 30

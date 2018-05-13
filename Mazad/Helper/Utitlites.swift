@@ -156,7 +156,7 @@ extension UILabel {
             } else if fontNameToTest.range(of: "ultralight") != nil {
                 fontName += "-UltraLight";
             }
-            self.font = UIFont(name: fontName, size: self.font.pointSize)
+            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 13)
         }
     }
 }
@@ -178,11 +178,15 @@ extension UITextView {
             } else if fontNameToTest.range(of: "ultralight") != nil {
                 fontName += "-UltraLight";
             }
-            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 17)
+            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 13)
         }
     }
 }
-
+extension String {
+    var length: Int {
+        return self.characters.count
+    }
+}
 extension UITextField {
     
     public var substituteFontName : String {
@@ -201,7 +205,7 @@ extension UITextField {
             } else if fontNameToTest.range(of: "ultralight") != nil {
                 fontName += "-UltraLight";
             }
-            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 14)
+            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 13)
             self.autocorrectionType = .no
         }
     }

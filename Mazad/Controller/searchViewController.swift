@@ -57,6 +57,9 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "البحث"
+        self.productListArray.removeAll()
+        self.productTableView.reloadData()
         my_products = 0
         filter_category = 0
         add_product_flag = 0
@@ -138,24 +141,29 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
                 MBProgressHUD.hide(for: self.view,animated:true)
                 if  let result = results["products"] as? [[String:AnyObject]] {
                     print(result)
-                    for str:[String:AnyObject] in result {
-                        print(str)
-                        
-                        var each_list = [String:AnyObject]()
-                        
-                        each_list["name"] =  str["name"]! as AnyObject
-                        each_list["id"] =  str["id"] as AnyObject
-                        var url_image = str["image"] as?  String ?? ""
-                        each_list["image"] = url_image.replacingOccurrences(of: " ", with: "%20") as AnyObject
-                        each_list["date"] =  str["date"] as AnyObject
-                        each_list["city"] =  str["city"] as AnyObject
-                        each_list["category"] =  str["category"] as AnyObject
-                        each_list["user"] =  str["user"] as AnyObject
-                        self.productListArray.append(each_list)
-                        
-                        
-                        print(self.productListArray)
+                    if results["status"] as? Bool == true {
+                        for str:[String:AnyObject] in result {
+                            print(str)
+                            
+                            var each_list = [String:AnyObject]()
+                            
+                            each_list["name"] =  str["name"]! as AnyObject
+                            each_list["id"] =  str["id"] as AnyObject
+                            var url_image = str["image"] as?  String ?? ""
+                            each_list["image"] = url_image.replacingOccurrences(of: " ", with: "%20") as AnyObject
+                            each_list["date"] =  str["date"] as AnyObject
+                            each_list["city"] =  str["city"] as AnyObject
+                            each_list["category"] =  str["category"] as AnyObject
+                            each_list["user"] =  str["user"] as AnyObject
+                            self.productListArray.append(each_list)
+                            
+                            
+                            print(self.productListArray)
+                        }
+                    }else {
+                        Mazad.toastView(messsage: "عفوا , لا يوجد اعلانات بهذا الاسم", view: self.view)
                     }
+                   
                     self.productTableView.reloadData()
                 }
             }

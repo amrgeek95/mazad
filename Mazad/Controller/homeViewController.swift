@@ -20,6 +20,10 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
     @IBAction func leftBtnAction(_ sender: Any) {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       print(productListArray.count)
+        if productListArray.isEmpty {
+            return 0
+        }
         return productListArray.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,20 +76,24 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productTableViewCell") as? productTableViewCell
-        cell?.cityLabel.text = productListArray[indexPath.row]["city"] as? String ?? ""
-        cell?.nameLabel.text = productListArray[indexPath.row]["name"] as? String ?? ""
-        cell?.userLabel.text = productListArray[indexPath.row]["user"] as? String ?? ""
-        // cell?.productImage.imag = productListArray[indexPath.row]["city"] as? String ?? ""
-        // cell?.productImage.sd_setImage(with: productListArray[indexPath.row]["image"] as? String ?? "", placeholderImage: UIImage(named: "car_icon"))
-        if my_favourites == 1 {
-            cell?.favouriteIcon.isHidden = false
-        }else{
-            
-            cell?.favouriteIcon.isHidden = true
+        print(productListArray)
+        if !productListArray.isEmpty {
+            cell?.cityLabel.text = productListArray[indexPath.row]["city"] as? String ?? ""
+            cell?.nameLabel.text = productListArray[indexPath.row]["name"] as? String ?? ""
+            cell?.userLabel.text = productListArray[indexPath.row]["user"] as? String ?? ""
+            // cell?.productImage.imag = productListArray[indexPath.row]["city"] as? String ?? ""
+            // cell?.productImage.sd_setImage(with: productListArray[indexPath.row]["image"] as? String ?? "", placeholderImage: UIImage(named: "car_icon"))
+            if my_favourites == 1 {
+                cell?.favouriteIcon.isHidden = false
+            }else{
+                
+                cell?.favouriteIcon.isHidden = true
+            }
+            cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "placeholder"))
+            cell?.parent = self
+            cell?.indexNumber = indexPath.row
         }
-        cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "placeholder"))
-        cell?.parent = self
-        cell?.indexNumber = indexPath.row
+       
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

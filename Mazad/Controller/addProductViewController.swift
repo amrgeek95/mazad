@@ -11,7 +11,7 @@ import DLRadioButton
 import Alamofire
 import MBProgressHUD
 import Toast
-class addProductViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
+class addProductViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate {
     
     
     var option_array =  ["جدة","المدينة","الرياض","مكة","سدير"]
@@ -67,7 +67,7 @@ class addProductViewController: UIViewController ,UITableViewDataSource,UITableV
       
         cell?.phoneText.setBottomBorder()
         cell?.titleText.setBottomBorder()
-        cell?.bodyText.borderRound(border: 0.8, corner: 10)
+      //  cell?.bodyText.borderRound(border: 0.8, corner: 10)
         cell?.submitBtn.borderRoundradius(radius: 10)
         cell?.parent = self
         cell?.category_id = category_id
@@ -81,7 +81,7 @@ class addProductViewController: UIViewController ,UITableViewDataSource,UITableV
     
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
+        return 700
     }
     @IBOutlet weak var productTableView: UITableView!
     
@@ -153,6 +153,7 @@ class addProductViewController: UIViewController ,UITableViewDataSource,UITableV
             }
         }
     }
+    
    
     /*
     // MARK: - Navigation

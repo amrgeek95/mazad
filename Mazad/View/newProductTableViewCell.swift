@@ -1,4 +1,4 @@
-//
+////
 //  newProductTableViewCell.swift
 //  Mazad
 //
@@ -12,7 +12,7 @@ import MBProgressHUD
 import ImagePicker
 import Lightbox
 import DropDown
-class newProductTableViewCell: UITableViewCell , ImagePickerDelegate{
+class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextViewDelegate{
 
     var parent : addProductViewController!
     var dropDown = DropDown()
@@ -23,9 +23,9 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate{
     var imageArray = [String]()
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var phoneText: UITextField!
-    @IBOutlet weak var bodyText: UITextField!
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var categoryBtn: UIButton!
+    @IBOutlet weak var bodyText: UITextView!
     
     @IBOutlet weak var cityBtn: UIButton!
     
@@ -110,9 +110,15 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate{
     @IBAction func submitAction(_ sender: Any) {
         var parameters = [String:AnyObject]()
        
-        guard inputValidation(text: titleText.text!, message: "يجب كتابة عنوان للأعلان", view: self.parent.view) else{
+        guard inputValidation(text: self.titleText.text!, message: "يجب كتابة عنوان للأعلان", view: self.parent.view) else{
             
             return
+        }
+        let title = self.titleText.text!
+        print("titlLEngth\(title.length)")
+        if title.length > 30 {
+            Mazad.toastView(messsage: "يجب ان يقل العنوان عن ٣٠ حرف", view: self.parent.view)
+       return
         }
         guard inputValidation(text: bodyText.text!, message: "يجب كتابة محتوي الاعلان", view: self.parent.view) else{
             return
@@ -162,11 +168,51 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate{
         }
         
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
+       self.bodyText.text = "اكتب محتوي الاعلان"
+        self.bodyText.textColor = UIColor.lightGray
+       self.bodyText.delegate = self
+        self.bodyText.textAlignment = .right
+        let color = UIColor(red: 186/255, green: 186/255, blue: 186/255, alpha: 1.0).cgColor
+        bodyText.layer.borderColor = color
+        bodyText.layer.borderWidth = 0.5
+        bodyText.layer.cornerRadius = 5
+        bodyText.isSelectable = true
+        bodyText.isEditable = true
+        
     }
-
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+       
+        
+        if textView.text.isEmpty {
+            textView.text = "اكتب محتوي الاعلان"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+       
+    }
+    /*
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+        if textView.text.isEmpty {
+            textView.text = "اكتب محتوي الاعلان"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    */
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

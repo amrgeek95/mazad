@@ -31,10 +31,11 @@ class LoginViewController: SuperParentViewController {
          passwordText.setTextIcon(image: "password_icon")
         self.navigationItem.title = "تسجيل الدخول"
         
-       
-        
         // Do any additional setup after loading the view.
       //  self.navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
     }
 
     override func didReceiveMemoryWarning() {

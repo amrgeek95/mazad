@@ -72,7 +72,12 @@ class listNewsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         imageViewBar.image = imagebar
         
         navigationItem.titleView = imageViewBar
+        navigationItem.title = "الأخبار"
         get_news()
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -70,7 +70,9 @@ extension chatViewController:UITextFieldDelegate{
     //    self.inputToolbar.contentView.rightBarButtonItemWidth = 90
         self.collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero;
         self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero;
-        
+        self.inputToolbar.contentView.leftBarButtonItem = nil
+          self.inputToolbar.contentView.textView.placeHolder = "رسالة جديدة"
+
         sendButton.setImage(UIImage(named:"send-icon.png"), for: UIControlState())
         self.inputToolbar.contentView.rightBarButtonItem.isHidden = true
         self.inputToolbar.contentView.rightBarButtonContainerView.addSubview(sendButton)
@@ -97,6 +99,7 @@ extension chatViewController:UITextFieldDelegate{
         self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#394044")
         IQKeyboardManager.sharedManager().enableAutoToolbar = true
         IQKeyboardManager.sharedManager().enable = true
+          self.tabBarController?.tabBar.isHidden = false
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -117,6 +120,7 @@ extension chatViewController:UITextFieldDelegate{
         }
         IQKeyboardManager.sharedManager().enableAutoToolbar = false
         IQKeyboardManager.sharedManager().enable = false
+          self.tabBarController?.tabBar.isHidden = true
     }
     func applicationDidBecomeActive() {
         
@@ -202,9 +206,12 @@ extension chatViewController{
         parameters["message"] = msg
         parameters["to_id"] = otherId as AnyObject?
         parameters["chat_id"] = chat_id as AnyObject
+        print(parameters)
+        
         let send_url = base_url + "send_message"
         Alamofire.request(send_url, method: .post, parameters: parameters).responseJSON{
             (response) in
+            print(response)
                 if let results = response.result.value as? [String:AnyObject] {
                     if let status = results["status"] as? Bool {
                         var msgParse = ["from_id":userData["id"],"to_id":self.otherId,"chat_id":1,"message":msg]
@@ -240,25 +247,33 @@ extension chatViewController{
             Alamofire.request(msg_url, method: .post, parameters: parameters).responseJSON{
                 (response) in
                 print("chatResponse\(response)")
-                
-                if let results = response.result.value as? [String:AnyObject] {
-                    if let status = results["status"] as? Bool {
-                        if let chats = results["chats"] as? [[String:AnyObject]] {
-                            for chat:[String:AnyObject] in chats {
-                                self.messages.append(self.parseMessage(msg: chat))
+                switch response.result {
+                case .success:
+                    print("response ygd3an \(response.result.value)")
+                    if let results = response.result.value as? [String:AnyObject] {
+                        if let status = results["status"] as? Bool {
+                            if let chats = results["chats"] as? [[String:AnyObject]] {
+                                for chat:[String:AnyObject] in chats {
+                                    self.messages.append(self.parseMessage(msg: chat))
+                                }
                             }
+                            MBProgressHUD.hide(for: self.view, animated: true)
+                            self.collectionView.reloadData()
+                            self.automaticallyScrollsToMostRecentMessage = true
+                            self.finishReceivingMessage()
+                            
+                        }else{
+                            MBProgressHUD.hide(for: self.view, animated: true)
                         }
-                        MBProgressHUD.hide(for: self.view, animated: true)
-                         self.collectionView.reloadData()
-                        self.automaticallyScrollsToMostRecentMessage = true
-                        self.finishReceivingMessage()
-                        
                     }else{
                         MBProgressHUD.hide(for: self.view, animated: true)
                     }
-                }else{
-                    MBProgressHUD.hide(for: self.view, animated: true)
+                case .failure(let error):
+                    print(error)
+                    self.getMsgs(withLoading: true)
+                    break
                 }
+              
             }
             
         }

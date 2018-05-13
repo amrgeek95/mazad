@@ -47,8 +47,11 @@ class editProfileViewController: SuperParentViewController {
         self.emailText.text = userData["username"] as? String ?? ""
         self.mobileText.text = userData["mobile"] as? String ?? ""
        
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
         
-        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
     }
     
     @IBAction func signUpBtn(_ sender: Any) {

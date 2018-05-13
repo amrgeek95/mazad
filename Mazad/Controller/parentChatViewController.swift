@@ -21,6 +21,10 @@ class parentChatViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = otherName
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedChat" ,

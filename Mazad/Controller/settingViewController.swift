@@ -50,6 +50,31 @@ class settingViewController: SuperParentViewController ,UITableViewDataSource , 
         }
     }
     func deleteFavourite(sender:UIButton){
+        let alertController = UIAlertController(title: nil, message: "هل انت متاكد من مسح المفضلة", preferredStyle: .actionSheet)
+        
+        
+        let deleteAction = UIAlertAction(title: "مسح", style: .destructive, handler: { (alert: UIAlertAction!) -> Void in
+            self.delete_favourite()
+        })
+        
+        let cancelAction = UIAlertAction(title: "إلغاء", style: .cancel, handler: { (alert: UIAlertAction!) -> Void in
+            //  Do something here upon cancellation.
+        })
+        
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
+
+        
+    }
+    func delete_favourite(){
         var parameters = [String:AnyObject]()
         parameters["user_id"] = userData["id"] as AnyObject
         var delete_url = base_url + "delete_favourite"
@@ -66,7 +91,6 @@ class settingViewController: SuperParentViewController ,UITableViewDataSource , 
             }
         }
     }
-    
     
     @IBOutlet weak var settingTableView: UITableView!
     override func viewDidLoad() {
