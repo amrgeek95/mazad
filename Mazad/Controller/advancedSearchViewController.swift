@@ -18,10 +18,23 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
     var subCategoryArray = [[String]]()
     var subCategoryIdArray = [[String]]()
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryArray[collectionView.tag]["sub_count"]!.count as? Int ?? 0
+        print(categoryArray[collectionView.tag]["sub_count"])
+        
+        return categoryArray[collectionView.tag]["sub_count"] as? Int ?? 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+            let yourWidth = CGFloat((collectionView.frame.size.width / 2) - 10 )
+            let yourHeight = 40
+            
+            return CGSize(width: yourWidth, height: yourWidth)
+        }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "advancedCollection", for: indexPath) as? advancedCollectionViewCell
         if !subCategoryArray[collectionView.tag].isEmpty {
             cell?.categoryDrop.anchorView = cell?.categoryBtn // UIView or UIBarButtonItem
@@ -47,7 +60,7 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "advancedCell") as? advancedCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "advancedCell") as? advancedCellTableViewCell
         cell?.categoryLabel.text = categoryArray[indexPath.row]["name"] as? String ?? ""
         cell?.advancedCollectionView?.delegate = self
         cell?.advancedCollectionView?.dataSource = self
@@ -66,7 +79,7 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
-getAllCategory()
+        getAllCategory()
         
         // Do any additional setup after loading the view.
     }
@@ -90,7 +103,7 @@ getAllCategory()
                     
                     if let categ = results["categories"] as? [[String:AnyObject]]{
                         for categories:[String:AnyObject] in categ {
-                            var each_cateogry = ["name":categories["name"],"id":categories["id"]]
+                            var each_cateogry = ["sub_count":categories["sub_count"],"name":categories["name"],"id":categories["id"]]
                             print("eachcategory\(each_cateogry)")
                             print("categories\(categories)")
                             self.categoryArray.append(each_cateogry as [String : AnyObject])
@@ -118,7 +131,7 @@ getAllCategory()
                             
                         }
                     }
-                    
+                   self.advancedTableView.reloadData()
                 }
                 
             case .failure(let error):
