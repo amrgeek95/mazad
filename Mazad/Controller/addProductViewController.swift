@@ -67,6 +67,8 @@ class addProductViewController: UIViewController ,UITableViewDataSource,UITableV
                 print("Selected item: \(item) at index: \(index_sub)")
                 cell?.subBtn.setTitle("+\(self.sub_array[index_sub])", for: .normal)
                 self.view.layoutIfNeeded()
+                print("\(self.sub_id[index_sub])")
+                
                 cell?.sub_id = "\(self.sub_id[index_sub])"
                 if let children_exist = self.childrens_array[self.sub_id[index_sub]] as? [String]{
                     if !(self.childrens_array[self.sub_id[index_sub]]?.isEmpty)!{
@@ -85,6 +87,8 @@ class addProductViewController: UIViewController ,UITableViewDataSource,UITableV
                             self.view.layoutIfNeeded()
                             cell?.child_id = "\(self.childrens_id[self.sub_id[index_sub]]![index])"
                             //append child dropdown
+                                print("\(self.childrens_id[self.sub_id[index_sub]]![index])")
+                            
                         }
                     }
                 }else{

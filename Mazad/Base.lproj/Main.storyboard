@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-Droid-Arabic-Kufi.ttf">
+        <array key="ArbFONTS-Droid Arabic Kufi.ttf">
             <string>DroidArabicKufi</string>
         </array>
         <array key="ArialRoundedMTBold.ttf">
@@ -1239,11 +1239,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="aboutCell2" rowHeight="350" id="2eI-ts-xA9" customClass="aboutTableViewCell" customModule="Mazad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="248" width="375" height="350"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="aboutCell2" rowHeight="100" id="2eI-ts-xA9" customClass="aboutTableViewCell" customModule="Mazad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="248" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2eI-ts-xA9" id="o1k-xK-fk6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="349.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الانظمة والممنوعات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g76-cK-84J">
@@ -1361,7 +1361,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="aboutTextCell" rowHeight="340" id="kiB-DL-aVK" customClass="aboutTextTableViewCell" customModule="Mazad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="598" width="375" height="340"/>
+                                        <rect key="frame" x="0.0" y="348" width="375" height="340"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kiB-DL-aVK" id="5R4-ye-qW6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="339.5"/>
@@ -1402,7 +1402,7 @@
                                                     <color key="textColor" red="1" green="0.15089025850000001" blue="0.161304003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="الدلالة = ٥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-Pu-R84">
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="الدلالة = ٥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-Pu-R84">
                                                     <rect key="frame" x="40" y="202.5" width="295" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1414,14 +1414,17 @@
                                                     <color key="textColor" red="0.14117647059999999" green="0.61176470589999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يتم عن طريق التحويل البنكي للعمولة وبالضغط علي الايقونة بالاسفل يتم ارسال ارقام الحسابات لكم برسالة نصية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hib-4s-MF2">
-                                                    <rect key="frame" x="25" y="261.5" width="345" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يتم عن طريق التحويل البنكي للعمولة وبالضغط علي الايقونة بالاسفل يتم ارسال ارقام الحسابات لكم برسالة نصية" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hib-4s-MF2">
+                                                    <rect key="frame" x="25" y="261.5" width="345" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="Cm1-Hm-OfE"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-X0-reC">
-                                                    <rect key="frame" x="94.5" y="294.5" width="187.5" height="30"/>
+                                                    <rect key="frame" x="94.5" y="315.5" width="187.5" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="edx-RP-bGw"/>
                                                     </constraints>

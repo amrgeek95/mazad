@@ -41,7 +41,7 @@ class aboutViewController: UIViewController ,UITableViewDelegate,UITableViewData
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "aboutTextCell") as? aboutTextTableViewCell
             cell?.parent = self
-            return 380
+            return 400
         }
     }
     override func viewDidLoad() {

@@ -175,7 +175,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
                 print(results)
               
                 if results["status"] as? Bool == true {
-                    self.parent.view.makeToast("تم اضافة الاعلان بنجاح")
+                    self.parent.view.makeToast("تم اضافة الاعلان")
                    // self.parent.dismiss(animated: true, completion: nil)
                 }
                 
@@ -198,7 +198,6 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         bodyText.layer.cornerRadius = 5
         bodyText.isSelectable = true
         bodyText.isEditable = true
-        
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
