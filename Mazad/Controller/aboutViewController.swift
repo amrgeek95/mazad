@@ -29,6 +29,7 @@ class aboutViewController: UIViewController ,UITableViewDelegate,UITableViewData
             return cell!
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "aboutTextCell")
+            cell?.parent = self
             return cell!
         }
     }
@@ -40,7 +41,7 @@ class aboutViewController: UIViewController ,UITableViewDelegate,UITableViewData
            return 370
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "aboutTextCell") as? aboutTextTableViewCell
-            cell?.parent = self
+            
             return 400
         }
     }

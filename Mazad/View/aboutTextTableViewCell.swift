@@ -46,10 +46,10 @@ class aboutTextTableViewCell: UITableViewCell ,UITextFieldDelegate{
             var send_url = base_url + "bank_account"
             Alamofire.request(send_url, method: .post, parameters: parameters).responseJSON{
                 (response) in
-                //  Mazad.toastView(messsage: "تفقد بريدك الالكتروني", view: self.parent.view)
+                 Mazad.toastView(messsage: "تفقد بريدك الالكتروني", view: self.parent.view)
             }
         }else{
-            // Mazad.toastView(messsage: "يجب عليك التسجيل اولا", view: self.parent.view)
+             Mazad.toastView(messsage: "يجب عليك التسجيل اولا", view: self.parent.view)
         }
     }
     
