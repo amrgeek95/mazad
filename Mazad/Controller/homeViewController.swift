@@ -17,6 +17,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
     @IBOutlet weak var leftBtnItem: UIBarButtonItem!
     var category_id = ""
     var selected_index:Int!
+   
     @IBAction func leftBtnAction(_ sender: Any) {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -147,6 +148,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
         self.navigationItem.title = "الرئيسية"
         self.productListArray.removeAll()
         get_products()
+      
         let button = UIButton(type: .system)
         if checkUserData() == true {
             print(checkUserData())
@@ -169,6 +171,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
             
         }
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+ 
         
     }
     override func didReceiveMemoryWarning() {
@@ -214,6 +217,15 @@ extension homeViewController{
             url = base_url + "my_favourites"
             parameters["user_id"] = userData["id"] as AnyObject
         }
+        if advanced_flag == true {
+            if subcategory_id != "" {
+                parameters["subcategory_id"] = subcategory_id as AnyObject
+            }
+            if secondary_id != "" {
+                parameters["secondary_id"] = secondary_id as AnyObject
+            }
+        }
+       
         
         print("my_products\(my_products)")
         print("filter_category\(filter_category)")
@@ -227,6 +239,7 @@ extension homeViewController{
             if let results = response.result.value as? [String:AnyObject]{
                 print(results)
                 MBProgressHUD.hide(for: self.view,animated:true)
+                advanced_flag = false
                 if  let result = results["products"] as? [[String:AnyObject]] {
                     print(result)
                     for str:[String:AnyObject] in result {

@@ -14,15 +14,19 @@ class parentChatViewController: UIViewController {
     var chat_id = ""
     var otherId = ""
     var otherName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = otherName
          self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
+        
     }
+   
     override func viewWillDisappear(_ animated: Bool) {
          self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
     }

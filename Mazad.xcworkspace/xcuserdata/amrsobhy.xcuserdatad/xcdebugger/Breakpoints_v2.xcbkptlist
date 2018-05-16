@@ -25,28 +25,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mazad/Controller/searchViewController.swift"
-            timestampString = "547788553.148863"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "searchBar(searchBar:textDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Mazad/View/newProductTableViewCell.swift"
-            timestampString = "547891274.03098"
+            timestampString = "548150542.658345"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "submitAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mazad/Controller/ProductViewController.swift"
-            timestampString = "547788462.209486"
+            filePath = "Mazad/Controller/chatViewController.swift"
+            timestampString = "548150542.659593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "lightboxControllerWillDismiss(_:)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "sendPressed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

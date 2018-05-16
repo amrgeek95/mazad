@@ -33,7 +33,7 @@ class MenuController: UITableViewController ,SideMenuControllerDelegate{
         ,"تسجيل الخروج"]
     var menu_items_image = ["home_icon_active","search_menu","ads_menu","ads_menu","favourite_menu",
                             "contact_menu","percent_menu","user_icon","logout_menu"]
-    var segues = ["showHome","showCategories","showCategories","showCategories","showHome","showContact","showContact","showHome","showHome"]
+    var segues = ["showHome","showAdvanced","showCategories","showCategories","showHome","showContact","showAbout","showHome","showHome"]
     
     
     var actionSheet: UIAlertController!

@@ -71,6 +71,9 @@
 		2FC702652090D3C500D1E92A /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025F2090D3C500D1E92A /* navigationController.swift */; };
 		2FE363A2209BE29A001639A6 /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE363A1209BE299001639A6 /* ExamplePhoto.swift */; };
 		2FF91F202092676B00E97821 /* mainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF91F1F2092676B00E97821 /* mainTabBarController.swift */; };
+		2FFF136C20AC143700D8F878 /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF136B20AC143700D8F878 /* aboutViewController.swift */; };
+		2FFF136E20AC144B00D8F878 /* aboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */; };
+		2FFF137020AC145500D8F878 /* aboutTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF136F20AC145500D8F878 /* aboutTextTableViewCell.swift */; };
 		E50A24A549DCA49A7A9AB30C /* Pods_MazadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58792A8F276F3D7EBD82AA22 /* Pods_MazadTests.framework */; };
 		F3745CB1663D03040E14F3BB /* Pods_Mazad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2EEDFF2F8807707B22E3A /* Pods_Mazad.framework */; };
 /* End PBXBuildFile section */
@@ -165,6 +168,9 @@
 		2FC7025F2090D3C500D1E92A /* navigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
 		2FE363A1209BE299001639A6 /* ExamplePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePhoto.swift; sourceTree = "<group>"; };
 		2FF91F1F2092676B00E97821 /* mainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarController.swift; sourceTree = "<group>"; };
+		2FFF136B20AC143700D8F878 /* aboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
+		2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTableViewCell.swift; sourceTree = "<group>"; };
+		2FFF136F20AC145500D8F878 /* aboutTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTextTableViewCell.swift; sourceTree = "<group>"; };
 		4ED6987077851413C58925C0 /* Pods-Mazad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mazad/Pods-Mazad.debug.xcconfig"; sourceTree = "<group>"; };
 		58792A8F276F3D7EBD82AA22 /* Pods_MazadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MazadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB2EEDFF2F8807707B22E3A /* Pods_Mazad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,13 +287,12 @@
 		2FC702562090D35400D1E92A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2F58884420A2293000E7E4B3 /* editProfileViewController.swift */,
-				2F74E60620A1495400AFA1A7 /* usersChatViewController.swift */,
-				2F8FD10D20A0C80D0039F3DA /* chatViewController.swift */,
-				2F8FD10E20A0C80D0039F3DA /* parentChatViewController.swift */,
 				2F5ED38E209110A700E4B829 /* addProductViewController.swift */,
+				2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */,
 				2F5ED390209110B700E4B829 /* categoriesViewController.swift */,
+				2F8FD10D20A0C80D0039F3DA /* chatViewController.swift */,
 				2F05FD512094D9650005FB42 /* contactViewController.swift */,
+				2F58884420A2293000E7E4B3 /* editProfileViewController.swift */,
 				2F5ED3882090E92F00E4B829 /* homeViewController.swift */,
 				2F5ED392209110C400E4B829 /* listNewsViewController.swift */,
 				2FC7025A2090D3C500D1E92A /* LoginViewController.swift */,
@@ -296,6 +301,7 @@
 				2FC7025D2090D3C500D1E92A /* MenuController.swift */,
 				2FC7025F2090D3C500D1E92A /* navigationController.swift */,
 				2F5ED395209110DA00E4B829 /* newsViewController.swift */,
+				2F8FD10E20A0C80D0039F3DA /* parentChatViewController.swift */,
 				2FB7FEDF2091DA4400B39CFC /* preLoginViewController.swift */,
 				2F41C3C32095F459007AA346 /* ProductViewController.swift */,
 				2F9B04382093713E000F7E86 /* searchViewController.swift */,
@@ -304,7 +310,8 @@
 				2F5ED3862090E90B00E4B829 /* splashScreenViewController.swift */,
 				2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */,
 				2FC7025C2090D3C500D1E92A /* SuperParentViewController.swift */,
-				2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */,
+				2F74E60620A1495400AFA1A7 /* usersChatViewController.swift */,
+				2FFF136B20AC143700D8F878 /* aboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -350,6 +357,8 @@
 				2F74E60420A1493600AFA1A7 /* usersChatTableViewCell.swift */,
 				2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */,
 				2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */,
+				2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */,
+				2FFF136F20AC145500D8F878 /* aboutTextTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				2F41C3C82095F4C8007AA346 /* informationTableViewCell.swift in Sources */,
 				2F41C3CE20962B91007AA346 /* commentTableViewCell.swift in Sources */,
 				2FA1925820A7E23100F3B175 /* advancedCellTableViewCell.swift in Sources */,
+				2FFF136C20AC143700D8F878 /* aboutViewController.swift in Sources */,
 				2F8FD11020A0C80D0039F3DA /* parentChatViewController.swift in Sources */,
 				2F9A73C22091EA58003649D7 /* categoriesTableViewCell.swift in Sources */,
 				2F41C3D4209664A4007AA346 /* settingViewController.swift in Sources */,
@@ -701,6 +711,7 @@
 				2FC7022A2090A5CD00D1E92A /* Mazad.xcdatamodeld in Sources */,
 				2F5ED3872090E90B00E4B829 /* splashScreenViewController.swift in Sources */,
 				2F5ED393209110C400E4B829 /* listNewsViewController.swift in Sources */,
+				2FFF137020AC145500D8F878 /* aboutTextTableViewCell.swift in Sources */,
 				2FC702242090A5CD00D1E92A /* ViewController.swift in Sources */,
 				2F414F0C2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift in Sources */,
 				2F5ED3852090E33D00E4B829 /* Global.swift in Sources */,
@@ -716,6 +727,7 @@
 				2F5ED3832090E0FC00E4B829 /* Utitlites.swift in Sources */,
 				2F58884520A2293100E7E4B3 /* editProfileViewController.swift in Sources */,
 				2F74E60520A1493600AFA1A7 /* usersChatTableViewCell.swift in Sources */,
+				2FFF136E20AC144B00D8F878 /* aboutTableViewCell.swift in Sources */,
 				2FA1925620A7E21800F3B175 /* advancedSearchViewController.swift in Sources */,
 				2F5ED3892090E92F00E4B829 /* homeViewController.swift in Sources */,
 				2F41C3C62095F48E007AA346 /* titleTableViewCell.swift in Sources */,

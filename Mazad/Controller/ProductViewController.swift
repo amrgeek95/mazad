@@ -185,9 +185,7 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         get_product()
        
         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
-     //   CGRect resizedFrame = myBarButtonItem.customView.frame;
-    //    resizedFrame.size.width = myNewWidth;
-       // self.navigationItem..customView.frame = resizedFrame;
+        self.navigationItem.title = ""
         self.navigationItem.leftBarButtonItem?.customView?.frame = CGRect(x: 0, y: 0, width: 100, height: (self.navigationController?.navigationBar.bounds.height)!)
     }
     override func viewWillDisappear(_ animated: Bool) {

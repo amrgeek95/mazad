@@ -12,7 +12,8 @@ import Alamofire
 import MBProgressHUD
 import IQKeyboardManagerSwift
 class chatViewController: JSQMessagesViewController,UINavigationControllerDelegate {
-    
+    var refreshControl = UIRefreshControl()
+    var msgDate = [String]()
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImage(with: UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
     var outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImage(with: UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
     var messages = [JSQMessage]()
@@ -29,6 +30,10 @@ class chatViewController: JSQMessagesViewController,UINavigationControllerDelega
         self.setupChatToolBar()
         automaticallyScrollsToMostRecentMessage = true
         reloadMessagesView()
+        refreshControl.attributedTitle = NSAttributedString(string: "اسحب للتحديث")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: UIControlEvents.valueChanged)
+        self.collectionView!.addSubview(refreshControl)
+
         // Do any additional setup after loading the view.
     }
     func newMessage(_ notification: NSNotification) {
@@ -102,7 +107,16 @@ extension chatViewController:UITextFieldDelegate{
           self.tabBarController?.tabBar.isHidden = false
         
     }
+   
+
+    func refresh(_ refreshControl: UIRefreshControl) {
+        getMsgs(withLoading: true)
+        // Code to refresh table view
+         refreshControl.endRefreshing()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+      
         super.viewWillAppear(true)
         print("check")
         NotificationCenter.default.addObserver(self, selector: #selector(chatViewController.textChanged(_:)), name:NSNotification.Name(rawValue: "textChanged"), object: nil)
@@ -122,6 +136,7 @@ extension chatViewController:UITextFieldDelegate{
         IQKeyboardManager.sharedManager().enable = false
           self.tabBarController?.tabBar.isHidden = true
     }
+    
     func applicationDidBecomeActive() {
         
         print("what")
@@ -147,7 +162,24 @@ extension chatViewController{
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didDeleteMessageAt indexPath: IndexPath!) {
         self.messages.remove(at: indexPath.row)
     }
-    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForCellBottomLabelAt indexPath: IndexPath!) -> CGFloat {
+        return 20.0
+    }
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForCellBottomLabelAt indexPath: IndexPath!) -> NSAttributedString! {
+       
+        let attributes : [String : Any] = [NSFontAttributeName : UIFont.systemFont(ofSize: 10.0), NSForegroundColorAttributeName : UIColor.lightGray]
+
+        print(msgDate)
+        
+        return NSAttributedString(string: msgDate[indexPath.row], attributes: attributes)
+
+    }
+    /*
+    override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellBottomLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
+        let message: JSQMessage = self.messages[indexPath.item]
+        
+        return JSQMessagesTimestampFormatter.sharedFormatter().attributedTimestampForDate(message.date)
+    }*/
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         let data = messages[indexPath.row]
         if data.senderId == otherId {
@@ -184,11 +216,11 @@ extension chatViewController{
         print("test")
         let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
        // message?.messageStatus = "Sending"
-    
+     msgDate.append("منذ اقل من دقيقة")
         print("test")
         self.messages.append(message!)
         print("test")
-        self.finishSendingMessage()
+       // self.finishSendingMessage()
         print("test")
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -315,7 +347,10 @@ extension chatViewController{
             outgoing = false
             from = otherId
         }
-        if  let msg_text = msg["message"] as? String {
+        if var msg_text = msg["message"] as? String {
+           msgDate.append(msg["date"] as? String ?? "")
+            print("msgtext\(msg_text)")
+           
             let message = JSQMessage(senderId: "\(from!)"  , senderDisplayName: otherName, date: Date(), text: msg_text)
             print(message)
             if let seenFlg = msg["seen"] as? Bool{
