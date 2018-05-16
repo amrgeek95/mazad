@@ -107,7 +107,7 @@ class contactTableViewCell: UITableViewCell {
                 }
             }
         }else {
-            
+             Mazad.toastView(messsage: "يجب تسجيل الدخول اولا", view: self.parent.view)
         }
        
     }

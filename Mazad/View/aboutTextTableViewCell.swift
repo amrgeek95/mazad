@@ -20,6 +20,9 @@ class aboutTextTableViewCell: UITableViewCell ,UITextFieldDelegate{
         // Initialization codes
         text2.isEnabled = false
         text1.delegate = self
+        text1.keyboardType = .asciiCapableNumberPad
+        sendBtn.borderRoundradius(radius: 10)
+        
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 0 {
@@ -39,6 +42,7 @@ class aboutTextTableViewCell: UITableViewCell ,UITextFieldDelegate{
         // Configure the view for the selected state
     }
 
+    @IBOutlet weak var sendBtn: UIButton!
     @IBAction func sendAction(_ sender: Any) {
         var parameters = [String:Any]()
         if checkUserData(){

@@ -30,6 +30,23 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if my_products == 1 {
+            let closeAction = UIContextualAction(style: .normal, title:  "مسح", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                print("OK, marked as Closed")
+                self.selected_index = indexPath.row
+                self.deleteProduct()
+                success(true)
+            })
+            
+            //closeAction.image = UIImage(named: "user_icon")
+            closeAction.backgroundColor = .red
+            
+            return UISwipeActionsConfiguration(actions: [closeAction])
+        }else {
+            return UISwipeActionsConfiguration()
+        }
+    }
     func tableView(_ tableView: UITableView,
                    leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {

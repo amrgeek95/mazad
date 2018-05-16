@@ -22,9 +22,18 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
     var city_id = ""
     var sub_id = ""
     var child_id = ""
+    var checked = false
     var imageArray = [String]()
     
+    @IBAction func checkAction(_ sender: Any) {
+        if checked ==  true {
+            checked = false
+        }else{
+            checked = true
+        }
+    }
     
+    @IBOutlet weak var checkBtn: CheckBox!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var phoneText: UITextField!
     @IBOutlet weak var titleText: UITextField!
@@ -44,9 +53,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
     @IBOutlet weak var imageBtn: UIButton!
     @IBAction func categoryAction(_ sender: Any) {
     }
-    @IBAction func checkAction(_ sender: Any) {
-        
-    }
+   
     
     @IBAction func subAction(_ sender: Any) {
         dropDown2.show()
@@ -120,7 +127,10 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
     }
     @IBAction func submitAction(_ sender: Any) {
         var parameters = [String:AnyObject]()
-       
+        guard self.checked == true else{
+            Mazad.toastView(messsage: "يجب ان تقر التعهد", view: self.parent.view)
+            return
+        }
         guard inputValidation(text: self.titleText.text!, message: "يجب كتابة عنوان للأعلان", view: self.parent.view) else{
             
             return
@@ -130,6 +140,10 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         if title.length > 30 {
             Mazad.toastView(messsage: "يجب ان يقل العنوان عن ٣٠ حرف", view: self.parent.view)
        return
+        }
+        if bodyText.textColor == UIColor.lightGray {
+           Mazad.toastView(messsage: "يجب كتابة محتوي الاعلان", view: self.parent.view)
+            return
         }
         guard inputValidation(text: bodyText.text!, message: "يجب كتابة محتوي الاعلان", view: self.parent.view) else{
             return
@@ -141,6 +155,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
             Mazad.toastView(messsage: "يجب رفع صورة واحدة علي الاقل", view: self.parent.view)
             return
         }
+       
         parameters["name"] = titleText.text as AnyObject
         parameters["user_id"] = userData["id"] as AnyObject
         parameters["category_id"] = category_id as AnyObject
@@ -153,8 +168,6 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         if child_id == "" {
             child_id  = dropDown3.selectedItem as? String ?? ""
         }
-        print(sub_id)
-        print(city_id)
         
     parameters["city_id"] = city_id as AnyObject
         parameters["subcategory_id"] = sub_id as AnyObject
@@ -177,8 +190,10 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
                 if results["status"] as? Bool == true {
                     self.parent.view.makeToast("تم اضافة الاعلان")
                    // self.parent.dismiss(animated: true, completion: nil)
+                    my_products = 1
+                    let initialMain = self.parent.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
+                    self.parent.present(initialMain!, animated: true, completion: nil)
                 }
-                
             }
         }
         
@@ -198,6 +213,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         bodyText.layer.cornerRadius = 5
         bodyText.isSelectable = true
         bodyText.isEditable = true
+        self.phoneText.keyboardType = .asciiCapableNumberPad
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {

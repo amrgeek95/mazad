@@ -118,8 +118,8 @@ class MenuController: UITableViewController ,SideMenuControllerDelegate{
                     
                 }else{
                     
-                    let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
-                    self.present(initialMain!, animated: true, completion: nil)
+                    let show = self.storyboard?.instantiateViewController(withIdentifier: "preLogin") as? preLoginViewController
+                    self.present(show!, animated: true, completion: nil)
                     
                 }
                 

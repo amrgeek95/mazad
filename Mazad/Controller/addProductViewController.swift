@@ -11,7 +11,7 @@ import DLRadioButton
 import Alamofire
 import MBProgressHUD
 import Toast
-class addProductViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate {
+class addProductViewController: SuperParentViewController ,UITableViewDataSource,UITableViewDelegate {
     
     
     var option_array =  ["جدة","المدينة","الرياض","مكة","سدير"]
@@ -147,7 +147,11 @@ class addProductViewController: UIViewController ,UITableViewDataSource,UITableV
 
         
         dictionary["3"] = ["1","2","3"]
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
+    }
+    override func viewWillDisappear(_ animated: Bool) {
         
+        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceLeftToRight
     }
     func get_cities(){
         self.option_id.removeAll()

@@ -76,7 +76,7 @@ extension chatViewController:UITextFieldDelegate{
         self.collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero;
         self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero;
         self.inputToolbar.contentView.leftBarButtonItem = nil
-          self.inputToolbar.contentView.textView.placeHolder = "رسالة جديدة"
+          self.inputToolbar.contentView.textView.placeHolder = ""
 
         sendButton.setImage(UIImage(named:"send-icon.png"), for: UIControlState())
         self.inputToolbar.contentView.rightBarButtonItem.isHidden = true

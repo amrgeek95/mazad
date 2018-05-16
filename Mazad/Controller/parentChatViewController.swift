@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Toast
 import MBProgressHUD
-class parentChatViewController: UIViewController {
+class parentChatViewController: SuperParentViewController {
     var chat_id = ""
     var otherId = ""
     var otherName = ""
@@ -24,6 +24,7 @@ class parentChatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = otherName
          self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
+         self.navigationController?.navigationBar.tintColor = UIColor.white
         
     }
    

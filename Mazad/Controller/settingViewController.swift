@@ -43,11 +43,39 @@ class settingViewController: SuperParentViewController ,UITableViewDataSource , 
             cell?.deleteFavourite.borderRound(border: 0.2, corner: 7)
             if checkUserData(){
                 cell?.deleteFavourite.addTarget(self, action: #selector(self.deleteFavourite(sender:)), for: .touchUpInside)
+                cell?.deleteSearch.addTarget(self, action: #selector(self.deleteSearch(sender:)), for: .touchUpInside)
+                
             }
             
             cell?.deleteSearch.borderRound(border: 0.2, corner: 7)
+            
             return cell!
         }
+    }
+    func deleteSearch(sender:UIButton){
+        let alertController = UIAlertController(title: nil, message: "هل انت متاكد من مسح سجل البحث", preferredStyle: .actionSheet)
+        
+        
+        let deleteAction = UIAlertAction(title: "مسح", style: .destructive, handler: { (alert: UIAlertAction!) -> Void in
+            self.delete_search()
+        })
+        
+        let cancelAction = UIAlertAction(title: "إلغاء", style: .cancel, handler: { (alert: UIAlertAction!) -> Void in
+            //  Do something here upon cancellation.
+        })
+        
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        
     }
     func deleteFavourite(sender:UIButton){
         let alertController = UIAlertController(title: nil, message: "هل انت متاكد من مسح المفضلة", preferredStyle: .actionSheet)
@@ -86,6 +114,23 @@ class settingViewController: SuperParentViewController ,UITableViewDataSource , 
                 if let status = result["status"] as? Bool {
                     if status == true {
                         Mazad.toastView(messsage: "تم مسح المفضلة", view: self.view)
+                    }
+                }
+            }
+        }
+    }
+    func delete_search(){
+        var parameters = [String:AnyObject]()
+        parameters["user_id"] = userData["id"] as AnyObject
+        var delete_url = base_url + "delete_search"
+        print(parameters)
+        
+        Alamofire.request(delete_url, method: .post, parameters: parameters).responseJSON{
+            (response) in
+            if let result = response.result.value as? [String:AnyObject]{
+                if let status = result["status"] as? Bool {
+                    if status == true {
+                        Mazad.toastView(messsage: "تم المسح", view: self.view)
                     }
                 }
             }

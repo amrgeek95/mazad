@@ -132,6 +132,9 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         MBProgressHUD.showAdded(to: self.view, animated: true)
         var parameters = [String:AnyObject]()
         parameters["search"] = mySearchtext as AnyObject
+        if checkUserData(){
+            parameters["user_id"] = userData["id"] as AnyObject
+        }
         print(parameters)
         var url = base_url + "get_products"
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON{

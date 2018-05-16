@@ -31,8 +31,10 @@ class mainViewController: SideMenuController {
         
         let tabBarController = UITabBarController()
         
+        
         tabViewController1?.tabBarItem = UITabBarItem(
             title: "",
+            
             image: UIImage(named: "home_icon_active"),
             tag: 1)
         tabViewController2?.tabBarItem = UITabBarItem(

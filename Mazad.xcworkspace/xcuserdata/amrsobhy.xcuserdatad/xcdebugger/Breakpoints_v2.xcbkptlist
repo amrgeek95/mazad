@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/SignUpViewController.swift"
-            timestampString = "547718902.390588"
+            timestampString = "548196011.957625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -25,28 +25,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mazad/Controller/chatViewController.swift"
-            timestampString = "548150622.781484"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "sendPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Mazad/View/newProductTableViewCell.swift"
-            timestampString = "548176255.1850359"
+            timestampString = "548196439.63491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "submitAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548176255.186075"
+            timestampString = "548196011.9743659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -74,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548176255.186191"
+            timestampString = "548196011.97664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -90,173 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548176255.186263"
+            timestampString = "548196011.977311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazad/View/newProductTableViewCell.swift"
-            timestampString = "548176255.1863281"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "submitAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazad/View/newProductTableViewCell.swift"
-            timestampString = "548176255.186397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "submitAction(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mazad.newProductTableViewCell.submitAction(Any) -&gt; ()"
-                  moduleName = "Mazad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/newProductTableViewCell.swift"
-                  timestampString = "548176256.970795"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "151"
-                  endingLineNumber = "151"
-                  offsetFromSymbolStart = "5796">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 : @autoclosure () throws -&gt; Swift.String in Mazad.newProductTableViewCell.submitAction(Any) -&gt; ()"
-                  moduleName = "Mazad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/newProductTableViewCell.swift"
-                  timestampString = "548176256.9751019"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "151"
-                  endingLineNumber = "151"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazad/View/newProductTableViewCell.swift"
-            timestampString = "548176255.186461"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "submitAction(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mazad.newProductTableViewCell.submitAction(Any) -&gt; ()"
-                  moduleName = "Mazad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/newProductTableViewCell.swift"
-                  timestampString = "548176256.9985369"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "154"
-                  endingLineNumber = "154"
-                  offsetFromSymbolStart = "6580">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #3 : @autoclosure () throws -&gt; Swift.String in Mazad.newProductTableViewCell.submitAction(Any) -&gt; ()"
-                  moduleName = "Mazad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/newProductTableViewCell.swift"
-                  timestampString = "548176257.0028239"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "154"
-                  endingLineNumber = "154"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazad/View/newProductTableViewCell.swift"
-            timestampString = "548176255.186554"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "submitAction(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mazad.newProductTableViewCell.submitAction(Any) -&gt; ()"
-                  moduleName = "Mazad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/newProductTableViewCell.swift"
-                  timestampString = "548176257.035845"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
-                  offsetFromSymbolStart = "5012">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in Mazad.newProductTableViewCell.submitAction(Any) -&gt; ()"
-                  moduleName = "Mazad"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/newProductTableViewCell.swift"
-                  timestampString = "548176257.0404561"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
