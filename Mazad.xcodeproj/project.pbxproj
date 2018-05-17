@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0293C918A6FB5685807ABA7E /* Pods_MazadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FAF6F17974B1921A5AADB7 /* Pods_MazadUITests.framework */; };
+		2F01893E20ADA3F30034BA75 /* searchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F01893D20ADA3F30034BA75 /* searchTableViewCell.swift */; };
+		2F01894720ADCBD50034BA75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F01894620ADCBD40034BA75 /* GoogleService-Info.plist */; };
 		2F05FD522094D9650005FB42 /* contactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F05FD512094D9650005FB42 /* contactViewController.swift */; };
 		2F414F082099EAA400B8AD12 /* likeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F414F072099EAA400B8AD12 /* likeTableViewCell.swift */; };
 		2F414F0A2099ECA700B8AD12 /* newsTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F414F092099ECA700B8AD12 /* newsTitleTableViewCell.swift */; };
@@ -46,7 +48,7 @@
 		2F9B04392093713E000F7E86 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B04382093713E000F7E86 /* searchViewController.swift */; };
 		2FA1925620A7E21800F3B175 /* advancedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */; };
 		2FA1925820A7E23100F3B175 /* advancedCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */; };
-		2FA1925A20A7E24D00F3B175 /* advancedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */; };
+		2FA1925A20A7E24D00F3B175 /* imageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1925920A7E24D00F3B175 /* imageCollectionViewCell.swift */; };
 		2FA267C220A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */; };
 		2FA267C320A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */; };
 		2FA267C420A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */; };
@@ -97,6 +99,9 @@
 
 /* Begin PBXFileReference section */
 		2E4691E5488D91066808019B /* Pods-Mazad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mazad/Pods-Mazad.release.xcconfig"; sourceTree = "<group>"; };
+		2F01893D20ADA3F30034BA75 /* searchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTableViewCell.swift; sourceTree = "<group>"; };
+		2F01894520ADCB7F0034BA75 /* Mazad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mazad.entitlements; sourceTree = "<group>"; };
+		2F01894620ADCBD40034BA75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F05FD512094D9650005FB42 /* contactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactViewController.swift; sourceTree = "<group>"; };
 		2F414F072099EAA400B8AD12 /* likeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeTableViewCell.swift; sourceTree = "<group>"; };
 		2F414F092099ECA700B8AD12 /* newsTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -135,7 +140,7 @@
 		2F9B04382093713E000F7E86 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedSearchViewController.swift; sourceTree = "<group>"; };
 		2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedCellTableViewCell.swift; sourceTree = "<group>"; };
-		2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advancedCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FA1925920A7E24D00F3B175 /* imageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FA267BC20A2ACAE0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf"; sourceTree = "<group>"; };
 		2FA267BD20A2ACB40066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid Arabic Kufi.ttf"; sourceTree = "<group>"; };
 		2FA267BE20A2ACBC0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-Droid Arabic Kufi Bold.ttf"; sourceTree = "<group>"; };
@@ -247,6 +252,7 @@
 		2FC702202090A5CD00D1E92A /* Mazad */ = {
 			isa = PBXGroup;
 			children = (
+				2F01894520ADCB7F0034BA75 /* Mazad.entitlements */,
 				2FA267BB20A2AC970066CCA4 /* Fonts */,
 				2FC702592090D36B00D1E92A /* View */,
 				2FC702582090D36500D1E92A /* Helper */,
@@ -259,6 +265,7 @@
 				2FC702252090A5CD00D1E92A /* Main.storyboard */,
 				2FC7022B2090A5CD00D1E92A /* Assets.xcassets */,
 				2FC7022D2090A5CD00D1E92A /* LaunchScreen.storyboard */,
+				2F01894620ADCBD40034BA75 /* GoogleService-Info.plist */,
 				2FC702302090A5CD00D1E92A /* Info.plist */,
 				2FC702282090A5CD00D1E92A /* Mazad.xcdatamodeld */,
 				2FC702522090D31C00D1E92A /* Mazad-Bridging-Header.h */,
@@ -338,11 +345,15 @@
 		2FC702592090D36B00D1E92A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */,
+				2FFF136F20AC145500D8F878 /* aboutTextTableViewCell.swift */,
 				2F41C3CF20962BC3007AA346 /* addCommentTableViewCell.swift */,
+				2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */,
 				2F414F0B2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift */,
 				2F9A73C12091EA58003649D7 /* categoriesTableViewCell.swift */,
 				2F41C3CD20962B91007AA346 /* commentTableViewCell.swift */,
 				2F41C3CB2095F509007AA346 /* contactTableViewCell.swift */,
+				2FA1925920A7E24D00F3B175 /* imageCollectionViewCell.swift */,
 				2F41C3C92095F4F2007AA346 /* imageTableViewCell.swift */,
 				2F41C3C72095F4C8007AA346 /* informationTableViewCell.swift */,
 				2F414F072099EAA400B8AD12 /* likeTableViewCell.swift */,
@@ -355,10 +366,7 @@
 				2F41C3D120965C2F007AA346 /* settingTableViewCell.swift */,
 				2F41C3C52095F48E007AA346 /* titleTableViewCell.swift */,
 				2F74E60420A1493600AFA1A7 /* usersChatTableViewCell.swift */,
-				2FA1925720A7E23100F3B175 /* advancedCellTableViewCell.swift */,
-				2FA1925920A7E24D00F3B175 /* advancedCollectionViewCell.swift */,
-				2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */,
-				2FFF136F20AC145500D8F878 /* aboutTextTableViewCell.swift */,
+				2F01893D20ADA3F30034BA75 /* searchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,7 +406,6 @@
 				2FC7021B2090A5CD00D1E92A /* Frameworks */,
 				2FC7021C2090A5CD00D1E92A /* Resources */,
 				CF0C82635F4A8C0091300AD9 /* [CP] Embed Pods Frameworks */,
-				2115D287422D3B73B384B472 /* [CP] Copy Pods Resources */,
 				2FFAC292209A9CCE00BBF733 /* ShellScript */,
 			);
 			buildRules = (
@@ -418,8 +425,6 @@
 				2FC702312090A5CD00D1E92A /* Sources */,
 				2FC702322090A5CD00D1E92A /* Frameworks */,
 				2FC702332090A5CD00D1E92A /* Resources */,
-				9B03C6E211F64A2581CC4E4B /* [CP] Embed Pods Frameworks */,
-				5CB1FBE6385614B9CA60D40A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -439,8 +444,6 @@
 				2FC7023C2090A5CD00D1E92A /* Sources */,
 				2FC7023D2090A5CD00D1E92A /* Frameworks */,
 				2FC7023E2090A5CD00D1E92A /* Resources */,
-				930396D62FCD728138368924 /* [CP] Embed Pods Frameworks */,
-				20CCE443D297FD98BECE6F9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -466,6 +469,14 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2FC702342090A5CD00D1E92A = {
 						CreatedOnToolsVersion = 9.2;
@@ -512,6 +523,7 @@
 				2FA267C220A2ACBD0066CCA4 /* ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf in Resources */,
 				2FA267C420A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi Bold.ttf in Resources */,
 				2FC702272090A5CD00D1E92A /* Main.storyboard in Resources */,
+				2F01894720ADCBD50034BA75 /* GoogleService-Info.plist in Resources */,
 				2FA267C520A2ACBD0066CCA4 /* ArbFONTS-Droid-Arabic-Kufi-Bold.ttf in Resources */,
 				2FA267C320A2ACBD0066CCA4 /* ArbFONTS-Droid Arabic Kufi.ttf in Resources */,
 			);
@@ -540,43 +552,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MazadTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		20CCE443D297FD98BECE6F9E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadUITests/Pods-MazadUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2115D287422D3B73B384B472 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mazad/Pods-Mazad-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2FFAC292209A9CCE00BBF733 /* ShellScript */ = {
@@ -592,64 +577,22 @@
 			shellPath = /bin/sh;
 			shellScript = "";
 		};
-		5CB1FBE6385614B9CA60D40A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadTests/Pods-MazadTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		930396D62FCD728138368924 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadUITests/Pods-MazadUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9B03C6E211F64A2581CC4E4B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MazadTests/Pods-MazadTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B3BF125B393A66BD95A74512 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MazadUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3DAB1DA59D959471F431AFB /* [CP] Check Pods Manifest.lock */ = {
@@ -658,13 +601,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mazad-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF0C82635F4A8C0091300AD9 /* [CP] Embed Pods Frameworks */ = {
@@ -673,9 +619,50 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mazad/Pods-Mazad-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Lightbox/Lightbox.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/NYTPhotoViewer/NYTPhotoViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lightbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NYTPhotoViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -703,7 +690,7 @@
 				2F5ED391209110B700E4B829 /* categoriesViewController.swift in Sources */,
 				2FC702632090D3C500D1E92A /* MenuController.swift in Sources */,
 				2FC702642090D3C500D1E92A /* SuperParentTableViewController.swift in Sources */,
-				2FA1925A20A7E24D00F3B175 /* advancedCollectionViewCell.swift in Sources */,
+				2FA1925A20A7E24D00F3B175 /* imageCollectionViewCell.swift in Sources */,
 				2FC702612090D3C500D1E92A /* SignUpViewController.swift in Sources */,
 				2F41C3CC2095F509007AA346 /* contactTableViewCell.swift in Sources */,
 				2FC702652090D3C500D1E92A /* navigationController.swift in Sources */,
@@ -739,6 +726,7 @@
 				2F41C3CA2095F4F2007AA346 /* imageTableViewCell.swift in Sources */,
 				2F5ED38C20910F0A00E4B829 /* productTableViewCell.swift in Sources */,
 				2FC702552090D31E00D1E92A /* SWRevealViewController.m in Sources */,
+				2F01893E20ADA3F30034BA75 /* searchTableViewCell.swift in Sources */,
 				2F5ED38F209110A700E4B829 /* addProductViewController.swift in Sources */,
 				2FC702622090D3C500D1E92A /* SuperParentViewController.swift in Sources */,
 				2F5ED396209110DA00E4B829 /* newsViewController.swift in Sources */,
@@ -910,6 +898,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Mazad/Mazad.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S32NA7S358;
@@ -934,6 +923,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Mazad/Mazad.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S32NA7S358;

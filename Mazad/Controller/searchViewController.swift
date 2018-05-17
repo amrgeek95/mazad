@@ -12,32 +12,56 @@ import MBProgressHUD
 import Toast
 
 class searchViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate{
+    var searchArray = [String]()
+    var recentSearch = true
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productListArray.count
+        if recentSearch ==  true {
+          return  searchArray.count
+        }else{
+         
+            return productListArray.count
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let showProduct = self.storyboard?.instantiateViewController(withIdentifier: "productView") as? ProductViewController
-        showProduct?.product_id = productListArray[indexPath.row]["id"] as! String
-        self.navigationController?.pushViewController(showProduct!, animated: true)
+        if recentSearch ==  true {
+        }else{
+            let showProduct = self.storyboard?.instantiateViewController(withIdentifier: "productView") as? ProductViewController
+            showProduct?.product_id = productListArray[indexPath.row]["id"] as! String
+            self.navigationController?.pushViewController(showProduct!, animated: true)
+        }
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "productTableViewCell") as? productTableViewCell
+        if recentSearch  == true {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell") as! searchTableViewCell
+            cell.searchLabel.text = searchArray[indexPath.row]
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "productTableViewCell") as? productTableViewCell
+            
+            cell?.cityLabel.text = productListArray[indexPath.row]["city"] as? String ?? ""
+            cell?.nameLabel.text = productListArray[indexPath.row]["name"] as? String ?? ""
+            cell?.userLabel.text = productListArray[indexPath.row]["user"] as? String ?? ""
+            // cell?.productImage.imag = productListArray[indexPath.row]["city"] as? String ?? ""
+            // cell?.productImage.sd_setImage(with: productListArray[indexPath.row]["image"] as? String ?? "", placeholderImage: UIImage(named: "car_icon"))
+            cell?.favouriteIcon.isHidden = true
+            
+            cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "car_icon"))
+            return cell!
+        }
         
-        cell?.cityLabel.text = productListArray[indexPath.row]["city"] as? String ?? ""
-        cell?.nameLabel.text = productListArray[indexPath.row]["name"] as? String ?? ""
-        cell?.userLabel.text = productListArray[indexPath.row]["user"] as? String ?? ""
-        // cell?.productImage.imag = productListArray[indexPath.row]["city"] as? String ?? ""
-        // cell?.productImage.sd_setImage(with: productListArray[indexPath.row]["image"] as? String ?? "", placeholderImage: UIImage(named: "car_icon"))
-        cell?.favouriteIcon.isHidden = true
-        
-        cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "car_icon"))
-        return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        if recentSearch == true {
+            
+            return 50
+        }else{
+         
+            return 125
+        }
     }
     
     
@@ -57,6 +81,7 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        get_recent_search()
         self.navigationItem.title = "البحث"
         self.productListArray.removeAll()
         self.productTableView.reloadData()
@@ -124,8 +149,29 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         print(mySearchBar.text!)
         searchBar.endEditing(true)
         searchBar.text = nil
+        recentSearch = false
         filter_products()
         
+    }
+    func get_recent_search(){
+        self.searchArray.removeAll()
+        var parameters = [String:AnyObject]()
+        if checkUserData(){
+            parameters["user_id"] = userData["id"] as AnyObject
+        }
+        print(parameters)
+        var url = base_url + "get_search"
+        Alamofire.request(url, method: .post, parameters: parameters).responseJSON{
+            (response) in
+            if let results = response.result.value as? [String:AnyObject]{
+                if let result_search = results["search"] as? [String] {
+                    self.searchArray = result_search
+                   
+                    self.productTableView.reloadData()
+                    
+                }
+            }
+        }
     }
     func filter_products(){
         self.productListArray.removeAll()

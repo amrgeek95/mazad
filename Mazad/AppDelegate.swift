@@ -13,7 +13,15 @@ import IQKeyboardManagerSwift
 import MBProgressHUD
 import Alamofire
 
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
+
+import UserNotifications
+
 import SideMenuController
+
+
 var userData = [String:Any]()
 var token = ""
 var base_url = "http://mazad-sa.net/mazad/api/"
@@ -21,16 +29,44 @@ var is_logged :Bool!
 let headers = ["": ""]
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenterDelegate ,MessagingDelegate {
+    var deviceTokenString = ""
     
     var window: UIWindow?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        //let isRegisteredForLocalNotifications = UIApplication.shared.currentUserNotificationSettings?.types.contains(UIUserNotificationType.alert) ?? false
+
         var rootController: UIViewController?
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(hexString: "#21A6DF")]
+       
+        
+        
+        FirebaseApp.configure()
+        
+        Messaging.messaging().delegate = self
+        
+        // Register for remote notifications. This shows a permission dialog on first run, to
+        // show the dialog at a more appropriate time move this registration accordingly.
+        // [START register_for_notifications]
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        application.registerForRemoteNotifications()
+        
 
         UINavigationBar.appearance().isTranslucent = false
         
@@ -55,7 +91,78 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    //Completed registering for notifications. Store the device token to be saved later
     
+    func application( _ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data ) {
+  
+        let token = InstanceID.instanceID().token()
+        print("Salman iphone Token =", token!)
+        deviceTokenString = token!
+        update_token()
+        
+    }
+    func update_token(){
+        var parameters = [String:AnyObject]()
+        parameters["token"] = deviceTokenString as AnyObject
+        parameters["id"] = userData["id"] as AnyObject
+        parameters["type"] = 1 as AnyObject
+        print(parameters)
+        
+        var token_url = base_url + "update_token"
+        Alamofire.request(token_url, method: .post, parameters: parameters).responseJSON{
+            (response) in
+            print("tokenResponse\(response)")
+            
+        }
+        
+    }
+    /*
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        var tokenString = ""
+        
+        for i in 0..<deviceToken.length {
+            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
+        }
+        
+        InstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.Unknown)
+        
+        print("tokenString: \(tokenString)")
+    }
+    */
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        // If you are receiving a notification message while your app is in the background,
+        // this callback will not be fired till the user taps on the notification launching the application.
+        // TODO: Handle data of notification
+        
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        // Print message ID.
+        
+        // Print full message.
+        print(userInfo)
+        
+    }
+    func applicationReceivedRemoteMessage(_ remoteMessage: MessagingRemoteMessage) {
+        print(remoteMessage.appData)
+    }
+    func application(
+        _ application: UIApplication,
+        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+    }
+    @available(iOS 10.0, *)
+    func userNotificationCenter(center: UNUserNotificationCenter, willPresentNotification notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler([UNNotificationPresentationOptions.alert,UNNotificationPresentationOptions.sound,UNNotificationPresentationOptions.badge])
+    }
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+        let userInfo = notification.request.content.userInfo as? NSDictionary
+        print("yarab\(userInfo)")
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

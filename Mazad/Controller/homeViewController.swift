@@ -108,6 +108,16 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
                 cell?.favouriteIcon.isHidden = true
             }
             cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "placeholder"))
+           
+            cell?.productImage.layer.cornerRadius = 10
+            
+            cell?.productImage.layer.masksToBounds = true
+            cell?.productImage.layer.borderWidth = 3
+            cell?.productImage.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.productImage.layer.cornerRadius = 20
+            cell?.productImage.contentMode = .scaleAspectFill
+            
+            
             cell?.parent = self
             cell?.indexNumber = indexPath.row
         }
@@ -157,6 +167,9 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
     }
     func clickOnTitle(button: UIButton) {
         self.performSegue(withIdentifier: "showNews", sender: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationItem.title = ""
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

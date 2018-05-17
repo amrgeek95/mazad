@@ -12,7 +12,7 @@ import MBProgressHUD
 import ImagePicker
 import Lightbox
 import DropDown
-class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextViewDelegate{
+class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextViewDelegate {
 
     var parent : addProductViewController!
     var dropDown = DropDown()
@@ -25,6 +25,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
     var checked = false
     var imageArray = [String]()
     
+    @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBAction func checkAction(_ sender: Any) {
         if checked ==  true {
             checked = false
@@ -101,10 +102,13 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
                 upload.responseJSON { response in
                     print("success")
                     print(response)
+                         MBProgressHUD.hide(for: self.parent.view, animated: true)
                      if let results = response.result.value as? [String:AnyObject]{
                         if let result_image = results["images"] as? [String] {
                             self.imageArray = result_image
-                        MBProgressHUD.hide(for: self.parent.view, animated: true)
+                            self.parent.image = result_image
+                            self.imageCollectionView.reloadData()
+                            
                         }else{
                             print("why")
                              MBProgressHUD.hide(for: self.parent.view, animated: true)
@@ -138,7 +142,7 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         let title = self.titleText.text!
         print("titlLEngth\(title.length)")
         if title.length > 30 {
-            Mazad.toastView(messsage: "يجب ان يقل العنوان عن ٣٠ حرف", view: self.parent.view)
+            Mazad.toastView(messsage: "عنوان الاعلان طويل جدا", view: self.parent.view)
        return
         }
         if bodyText.textColor == UIColor.lightGray {

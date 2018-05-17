@@ -50,7 +50,7 @@ class likeTableViewCell: UITableViewCell {
                 if let results = response.result.value as? [String:AnyObject] {
                     if let status = results["status"] as? Bool {
                          self.parent.get_news()
-                        Mazad.toastView(messsage: "تس تسجيل تقييمك", view: self.parent.view)
+                        Mazad.toastView(messsage: "تم تسجيل تقييمك", view: self.parent.view)
                     }
                 }
             }
@@ -71,7 +71,7 @@ class likeTableViewCell: UITableViewCell {
                     if let status = results["status"] as? Bool {
                         
                         self.parent.get_news()
-                          Mazad.toastView(messsage: "تس تسجيل تقييمك", view: self.parent.view)
+                          Mazad.toastView(messsage: "تم تسجيل تقييمك", view: self.parent.view)
                     }
                 }
             }

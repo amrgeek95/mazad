@@ -78,8 +78,8 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             cell?.img.layer.cornerRadius = 30
             
             cell?.img.layer.masksToBounds = true
-            cell?.img.layer.borderWidth = 0.5
-            cell?.img.layer.borderColor = UIColor.white.cgColor
+            cell?.img.layer.borderWidth = 1
+            cell?.img.layer.borderColor = UIColor.lightGray.cgColor
             cell?.img.layer.cornerRadius = 20
             cell?.img.contentMode = .scaleAspectFill
            
@@ -179,14 +179,15 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         self.productTableView.separatorStyle = .none
         self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.0)
         self.navigationController?.navigationBar.layer.shadowRadius = 0
-       
+        get_product()
     }
     override func viewWillAppear(_ animated: Bool) {
-        get_product()
+       
        
         self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
         self.navigationItem.title = ""
-        self.navigationItem.leftBarButtonItem?.customView?.frame = CGRect(x: 0, y: 0, width: 100, height: (self.navigationController?.navigationBar.bounds.height)!)
+        self.navigationItem.leftBarButtonItem?.customView?.frame = CGRect(x: 0, y: 0, width: 200, height: (self.navigationController?.navigationBar.bounds.height)!)
+          self.navigationItem.rightBarButtonItem?.customView?.frame = CGRect(x: 0, y: 0, width: 200, height: (self.navigationController?.navigationBar.bounds.height)!)
     }
     override func viewWillDisappear(_ animated: Bool) {
         

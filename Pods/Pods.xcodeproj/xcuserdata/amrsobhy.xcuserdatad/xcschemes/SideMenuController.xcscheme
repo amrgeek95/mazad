@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E3C44D5311B9B9CEAF48ACC163229AE3'
-               BlueprintName = 'SideMenuController'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SideMenuController.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4B178A9D2E764CE14C6D5019D5FEA2E3"
+               BlueprintName = "SideMenuController"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "SideMenuController.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

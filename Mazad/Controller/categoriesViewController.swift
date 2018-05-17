@@ -28,6 +28,9 @@ class categoriesViewController: UIViewController ,UITableViewDataSource,UITableV
         
         // Do any additional setup after loading the view.
     }
+    override func viewWillDisappear(_ animated: Bool) {
+         self.navigationItem.title = ""
+    }
     override func viewWillAppear(_ animated: Bool) {
         if add_product_flag == 1 {
         self.navigationItem.title = " اختر قسم الاعلان "

@@ -28,11 +28,10 @@ target 'Mazad' do
   pod 'DLRadioButton', '~> 1.4'
   pod 'SideMenuController'
   pod 'NYTPhotoViewer'
-  
+
   pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
+ 
   pod 'JSQMessagesViewController'
   
    pod 'ImagePicker', '~> 2.1.1'

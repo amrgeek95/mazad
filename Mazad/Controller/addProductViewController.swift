@@ -11,9 +11,27 @@ import DLRadioButton
 import Alamofire
 import MBProgressHUD
 import Toast
-class addProductViewController: SuperParentViewController ,UITableViewDataSource,UITableViewDelegate {
+class addProductViewController: SuperParentViewController ,UITableViewDataSource,UITableViewDelegate ,UICollectionViewDelegate ,UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return image.count
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       
+            let yourWidth = CGFloat((collectionView.frame.size.width / 3) - 10 )
+            let yourHeight = yourWidth
+            
+            return CGSize(width: yourWidth, height: yourWidth)
+       
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionCell", for: indexPath as IndexPath) as! imageCollectionViewCell
+        cell.image.sd_setImage(with: URL(string: image_url + image[indexPath.row] as? String ?? ""), placeholderImage: UIImage(named: "placeholder"))
+        return cell
+    }
     
     
+    
+    var image_url = "http://mazad-sa.net/mazad/prod_img/"
     var option_array =  ["جدة","المدينة","الرياض","مكة","سدير"]
      var option_id =  ["0","1","2","3","4"]
     var sub_id = [String]()
@@ -22,6 +40,7 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
      var childrens_id = [String: [String]]()
     var city_selected = ""
     var category_id = ""
+    var image = [String]()
     
     
     @IBOutlet weak var childrenBtn: UIButton!
@@ -36,6 +55,20 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newProductCell") as? newProductTableViewCell
         if !option_array.isEmpty {
+            cell?.imageCollectionView.delegate = self
+            cell?.imageCollectionView.dataSource = self
+            cell?.imageCollectionView.tag = indexPath.row
+            
+            cell?.imageCollectionView.reloadData()
+            self.productTableView.setNeedsLayout()
+            self.productTableView.layoutIfNeeded()
+            cell?.selectionStyle = .none
+            let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+            
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+            
+            cell?.imageCollectionView!.collectionViewLayout = layout
+            
             cell?.childrenTop.constant = -20
             cell?.childrenBtn.isHidden = true
             cell?.dropDown.anchorView = cell?.cityBtn // UIView or UIBarButtonItem
@@ -120,7 +153,7 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
     
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 700
+        return 800
     }
     @IBOutlet weak var productTableView: UITableView!
     
@@ -129,6 +162,14 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
     self.productTableView.separatorStyle = .none
      
         self.productTableView.backgroundView?.backgroundColor = UIColor.clear
+        self.get_cities()
+        self.get_sub()
+        print(category_id)
+        var dictionary = [String: [String]]()
+        
+        
+        dictionary["3"] = ["1","2","3"]
+        
         // Do any additional setup after loading the view.
     }
     
@@ -140,14 +181,7 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
         self.navigationItem.title = " اضافة اعلان"
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#394044")
-        self.get_cities()
-        self.get_sub()
-        print(category_id)
-        var dictionary = [String: [String]]()
-
-        
-        dictionary["3"] = ["1","2","3"]
-        self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
+       self.navigationController?.navigationBar.plainView.semanticContentAttribute = .forceRightToLeft
     }
     override func viewWillDisappear(_ animated: Bool) {
         
