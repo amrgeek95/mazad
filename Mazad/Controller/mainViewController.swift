@@ -12,6 +12,9 @@ import SideMenuController
 class mainViewController: SideMenuController {
     var add_product_flag = 0
     var my_products = 0
+    var chatFlag = 0
+    var tabBarControllers = UITabBarController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -29,7 +32,6 @@ class mainViewController: SideMenuController {
         
        
         
-        let tabBarController = UITabBarController()
         
         
         tabViewController1?.tabBarItem = UITabBarItem(
@@ -49,17 +51,17 @@ class mainViewController: SideMenuController {
             title: "",
             image:UIImage(named: "setting_icon") ,
             tag:4)
-        tabBarController.viewControllers = [nc1, nc2, nc3 , nc4]
+        tabBarControllers.viewControllers = [nc1, nc2, nc3 , nc4]
        
         // create the side controller
         //performSegue(withIdentifier: "showHome", sender: nil)
        //  performSegue(withIdentifier: "containSideMenu", sender: nil)
       //  self.embed(centerViewController: UINavigationController(rootViewController:tabBarController))
         let sideController = self.storyboard?.instantiateViewController(withIdentifier: "menuController")
-        
+       
         // embed the side and center controllers
         sideMenuController?.embed(sideViewController: sideController!)
-        sideMenuController?.embed(centerViewController: tabBarController)
+        sideMenuController?.embed(centerViewController: tabBarControllers)
         
         // add the menu button to each view controller embedded in the tab bar controller
       
@@ -78,6 +80,12 @@ class mainViewController: SideMenuController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(segue.destination)
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if chatFlag == 1 {
+            
+            tabBarControllers.selectedIndex = 2
+        }
     }
     
 

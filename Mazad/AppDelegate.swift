@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
     
     var window: UIWindow?
     
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //let isRegisteredForLocalNotifications = UIApplication.shared.currentUserNotificationSettings?.types.contains(UIUserNotificationType.alert) ?? false
@@ -88,7 +88,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
             print(userData)
             
         }
-        
+        let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
+        if remoteNotif != nil {
+            let aps = remoteNotif!["aps" as NSString] as? [String:AnyObject]
+            NSLog("\n Custom: \(String(describing: aps))")
+        }
+        else {
+            NSLog("//////////////////////////Normal launch")
+        }
         return true
     }
     //Completed registering for notifications. Store the device token to be saved later
@@ -130,17 +137,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
     }
     */
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        // If you are receiving a notification message while your app is in the background,
-        // this callback will not be fired till the user taps on the notification launching the application.
-        // TODO: Handle data of notification
-        
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
-        // Messaging.messaging().appDidReceiveMessage(userInfo)
-        
-        // Print message ID.
-        
-        // Print full message.
-        print(userInfo)
+        print("yarabopen\(userInfo)")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "alertMessage"), object: "msg", userInfo: userInfo)
         
     }
     func applicationReceivedRemoteMessage(_ remoteMessage: MessagingRemoteMessage) {
@@ -150,6 +148,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         _ application: UIApplication,
         didReceiveRemoteNotification userInfo: [AnyHashable : Any],
         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        //Track notification only if the application opened from Background by clicking on the notification.
+        
+        print("yarabopen\(userInfo)")
+            //Track notification only if the application opened from Background by clicking on the notification.
+            if application.applicationState == .inactive  {
+                if let screenName = userInfo["targetScreen"] as? String {
+                    if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainView") as? mainViewController {
+                        controller.chatFlag = 1
+                        if let window = self.window, let rootViewController = window.rootViewController {
+                            var currentController = rootViewController
+                            while let presentedController = currentController.presentedViewController {
+                                currentController = presentedController
+                            }
+                            currentController.present(controller, animated: true, completion: nil)
+                        }
+                    }
+                    
+                }
+            }
+            
+            //The application was already active when the user got the notification, just show an alert.
+            //That should *not* be considered open from Push.
+            if application.applicationState == .active  {
+                //Capture notification data e.g. badge, alert and sound
+                print(userInfo["targetScreen"])
+                if let screenName = userInfo["targetScreen"] as? String {
+                    if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainView") as? mainViewController {
+                        controller.chatFlag = 1
+                        if let window = self.window, let rootViewController = window.rootViewController {
+                            var currentController = rootViewController
+                            while let presentedController = currentController.presentedViewController {
+                                currentController = presentedController
+                            }
+                            currentController.present(controller, animated: true, completion: nil)
+                        }
+                    }
+                    
+                }
+                
+                
+            }
         
     }
     @available(iOS 10.0, *)

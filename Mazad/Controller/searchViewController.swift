@@ -14,6 +14,7 @@ import Toast
 class searchViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate{
     var searchArray = [String]()
     var recentSearch = true
+    var old = false
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if recentSearch ==  true {
           return  searchArray.count
@@ -27,6 +28,9 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if recentSearch ==  true {
+            mySearchtext = searchArray[indexPath.row]
+            old = true
+            filter_products()
         }else{
             let showProduct = self.storyboard?.instantiateViewController(withIdentifier: "productView") as? ProductViewController
             showProduct?.product_id = productListArray[indexPath.row]["id"] as! String
@@ -174,12 +178,17 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         }
     }
     func filter_products(){
+        recentSearch = false
         self.productListArray.removeAll()
         MBProgressHUD.showAdded(to: self.view, animated: true)
         var parameters = [String:AnyObject]()
         parameters["search"] = mySearchtext as AnyObject
         if checkUserData(){
             parameters["user_id"] = userData["id"] as AnyObject
+            if old == true {
+            parameters["old"] = true as AnyObject
+                old = false
+            }
         }
         print(parameters)
         var url = base_url + "get_products"
