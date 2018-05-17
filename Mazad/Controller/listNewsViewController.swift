@@ -41,7 +41,7 @@ class listNewsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         cell?.categoryLabel.text = newsList[indexPath.row]["category"] as? String ?? ""
         
         cell?.img.sd_setImage(with: URL(string: newsList[indexPath.row]["image"] as! String), placeholderImage: UIImage(named: "car_icon"))
-        cell?.productImage.layer.cornerRadius = 10
+        cell?.img.layer.cornerRadius = 10
         
         cell?.img.layer.masksToBounds = true
         cell?.img.layer.borderWidth = 3
