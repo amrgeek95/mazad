@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/SignUpViewController.swift"
-            timestampString = "548196011.957625"
+            timestampString = "548345686.142112"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "signUpBtn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548293170.180039"
+            timestampString = "548295406.551317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548293170.18124"
+            timestampString = "548295406.551944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548293170.181331"
+            timestampString = "548295406.552174"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
@@ -73,14 +73,110 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mazad/AppDelegate.swift"
-            timestampString = "548293170.1814719"
+            filePath = "Mazad/View/categoriesTableViewCell.swift"
+            timestampString = "548345686.146916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "notificationAction(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
+                  moduleName = "Mazad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "548345687.756497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
+                  moduleName = "Mazad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "548345687.767046"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazad/View/categoriesTableViewCell.swift"
+            timestampString = "548345686.147194"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "notificationAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazad/View/categoriesTableViewCell.swift"
+            timestampString = "548345686.147601"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "notificationAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
+                  moduleName = "Mazad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "548345687.808974"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
+                  moduleName = "Mazad"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "548345687.818904"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Toast
+import UserNotifications
 class LoginViewController: SuperParentViewController {
 
     @IBOutlet weak var signBtn: UIButton!
@@ -68,6 +69,7 @@ class LoginViewController: SuperParentViewController {
                             print(user_data)
                             userData = user_data
                             saveUserData(userData: user_data as [String:AnyObject])
+                            self.setNotification()
                             let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
                             self.present(initialMain!, animated: true, completion: nil)
                         }else{
@@ -88,7 +90,7 @@ class LoginViewController: SuperParentViewController {
             
         }
     }
-   
+    
     
     /*
     // MARK: - Navigation

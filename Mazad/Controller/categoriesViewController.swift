@@ -89,9 +89,10 @@ class categoriesViewController: UIViewController ,UITableViewDataSource,UITableV
         var url = base_url + "get_category"
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON{
             (response) in
+             MBProgressHUD.hide(for: self.view,animated:true)
             if let results = response.result.value as? [String:AnyObject]{
                 print(results)
-                MBProgressHUD.hide(for: self.view,animated:true)
+               
                 if  let result = results["categories"] as? [[String:String]] {
                     print(result)
                     for str:[String:String] in result {

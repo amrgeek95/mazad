@@ -25,12 +25,12 @@
                         <rect key="frame" x="5" y="13" width="430" height="101"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPz-C3-XB4">
-                                <rect key="frame" x="107.5" y="19.5" width="215" height="17"/>
+                                <rect key="frame" x="150.5" y="19.5" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" red="0.28166640230000001" green="0.28166640230000001" blue="0.28166640230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Z8p-c7-xPE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z8p-c7-xPE">
                                 <rect key="frame" x="5" y="0.0" width="100" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="06D-OH-fB9"/>
@@ -86,7 +86,7 @@
                             <constraint firstItem="Z8p-c7-xPE" firstAttribute="height" secondItem="FmR-fi-AkT" secondAttribute="height" id="WY0-ly-RYi"/>
                             <constraint firstItem="Z8p-c7-xPE" firstAttribute="top" secondItem="FmR-fi-AkT" secondAttribute="top" id="Zfm-7R-Sau"/>
                             <constraint firstAttribute="bottom" secondItem="Rqy-L3-37x" secondAttribute="bottom" constant="20" id="kJz-TY-7BV"/>
-                            <constraint firstItem="bPz-C3-XB4" firstAttribute="centerX" secondItem="FmR-fi-AkT" secondAttribute="centerX" id="orP-RV-fwL"/>
+                            <constraint firstItem="bPz-C3-XB4" firstAttribute="centerX" secondItem="FmR-fi-AkT" secondAttribute="centerX" multiplier="1.2" id="orP-RV-fwL"/>
                             <constraint firstItem="JHT-oQ-Iuu" firstAttribute="bottom" secondItem="eRG-dt-524" secondAttribute="bottom" id="u9d-Lc-zGw"/>
                             <constraint firstItem="Rqy-L3-37x" firstAttribute="leading" secondItem="Z8p-c7-xPE" secondAttribute="trailing" constant="10" id="yBS-or-V8v"/>
                         </constraints>
@@ -112,8 +112,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="car_icon" width="304" height="149"/>
         <image name="heart_icon" width="25" height="25"/>
+        <image name="logo" width="49" height="34"/>
         <image name="marker_icon" width="43" height="46"/>
         <image name="user_icon" width="30" height="30"/>
     </resources>

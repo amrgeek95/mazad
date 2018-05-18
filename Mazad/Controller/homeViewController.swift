@@ -107,7 +107,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
                 
                 cell?.favouriteIcon.isHidden = true
             }
-            cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "placeholder"))
+            cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "logo"))
            
             cell?.productImage.layer.cornerRadius = 10
             
@@ -266,9 +266,10 @@ extension homeViewController{
        
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON{
             (response) in
+             MBProgressHUD.hide(for: self.view,animated:true)
             if let results = response.result.value as? [String:AnyObject]{
                 print(results)
-                MBProgressHUD.hide(for: self.view,animated:true)
+               
                 advanced_flag = false
                 if  let result = results["products"] as? [[String:AnyObject]] {
                     print(result)

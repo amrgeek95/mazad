@@ -72,6 +72,8 @@
 		2FC702642090D3C500D1E92A /* SuperParentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */; };
 		2FC702652090D3C500D1E92A /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7025F2090D3C500D1E92A /* navigationController.swift */; };
 		2FE363A2209BE29A001639A6 /* ExamplePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE363A1209BE299001639A6 /* ExamplePhoto.swift */; };
+		2FEF28E220AF0B400078B132 /* verificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF28E020AF0B3F0078B132 /* verificationViewController.swift */; };
+		2FEF28E320AF0B400078B132 /* resetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF28E120AF0B3F0078B132 /* resetPasswordViewController.swift */; };
 		2FF91F202092676B00E97821 /* mainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF91F1F2092676B00E97821 /* mainTabBarController.swift */; };
 		2FFF136C20AC143700D8F878 /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF136B20AC143700D8F878 /* aboutViewController.swift */; };
 		2FFF136E20AC144B00D8F878 /* aboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */; };
@@ -172,6 +174,8 @@
 		2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperParentTableViewController.swift; sourceTree = "<group>"; };
 		2FC7025F2090D3C500D1E92A /* navigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
 		2FE363A1209BE299001639A6 /* ExamplePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePhoto.swift; sourceTree = "<group>"; };
+		2FEF28E020AF0B3F0078B132 /* verificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = verificationViewController.swift; sourceTree = "<group>"; };
+		2FEF28E120AF0B3F0078B132 /* resetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resetPasswordViewController.swift; sourceTree = "<group>"; };
 		2FF91F1F2092676B00E97821 /* mainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarController.swift; sourceTree = "<group>"; };
 		2FFF136B20AC143700D8F878 /* aboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
 		2FFF136D20AC144B00D8F878 /* aboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTableViewCell.swift; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 		2FC702562090D35400D1E92A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2FEF28E120AF0B3F0078B132 /* resetPasswordViewController.swift */,
+				2FEF28E020AF0B3F0078B132 /* verificationViewController.swift */,
 				2F5ED38E209110A700E4B829 /* addProductViewController.swift */,
 				2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */,
 				2F5ED390209110B700E4B829 /* categoriesViewController.swift */,
@@ -697,11 +703,13 @@
 				2F8FD10F20A0C80D0039F3DA /* chatViewController.swift in Sources */,
 				2FC7022A2090A5CD00D1E92A /* Mazad.xcdatamodeld in Sources */,
 				2F5ED3872090E90B00E4B829 /* splashScreenViewController.swift in Sources */,
+				2FEF28E320AF0B400078B132 /* resetPasswordViewController.swift in Sources */,
 				2F5ED393209110C400E4B829 /* listNewsViewController.swift in Sources */,
 				2FFF137020AC145500D8F878 /* aboutTextTableViewCell.swift in Sources */,
 				2FC702242090A5CD00D1E92A /* ViewController.swift in Sources */,
 				2F414F0C2099ED0B00B8AD12 /* bodyNewsTableViewCell.swift in Sources */,
 				2F5ED3852090E33D00E4B829 /* Global.swift in Sources */,
+				2FEF28E220AF0B400078B132 /* verificationViewController.swift in Sources */,
 				2F5ED37F2090D76200E4B829 /* menuTableViewCell.swift in Sources */,
 				2F9B04392093713E000F7E86 /* searchViewController.swift in Sources */,
 				2FF91F202092676B00E97821 /* mainTabBarController.swift in Sources */,

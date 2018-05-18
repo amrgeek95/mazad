@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class SuperParentViewController: UIViewController {
+import UserNotifications
+class SuperParentViewController: UIViewController ,UNUserNotificationCenterDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,34 @@ class SuperParentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setNotification(){
+        if #available(iOS 10.0, *) {
+            
+            // SETUP FOR NOTIFICATION FOR iOS >= 10.0
+            let center  = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                if error == nil{
+                    DispatchQueue.main.async(execute: {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    })
+                }
+            }
+            
+        } else {
+            
+            // SETUP FOR NOTIFICATION FOR iOS < 10.0
+            
+            let settings = UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            
+            // This is an asynchronous method to retrieve a Device Token
+            // Callbacks are in AppDelegate.swift
+            // Success = didRegisterForRemoteNotificationsWithDeviceToken
+            // Fail = didFailToRegisterForRemoteNotificationsWithError
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
     /*
     // MARK: - Navigation
 

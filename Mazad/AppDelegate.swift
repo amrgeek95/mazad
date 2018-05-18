@@ -37,7 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //let isRegisteredForLocalNotifications = UIApplication.shared.currentUserNotificationSettings?.types.contains(UIUserNotificationType.alert) ?? false
+        var isRegisteredForLocalNotifications = UIApplication.shared.currentUserNotificationSettings?.types.contains(UIUserNotificationType.alert) ?? false
+        print(isRegisteredForLocalNotifications)
+     
+        
 
         var rootController: UIViewController?
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(hexString: "#21A6DF")]
@@ -88,25 +91,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
             print(userData)
             
         }
-        let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
-        if remoteNotif != nil {
-            let aps = remoteNotif!["aps" as NSString] as? [String:AnyObject]
-            NSLog("\n Custom: \(String(describing: aps))")
-        }
-        else {
-            NSLog("//////////////////////////Normal launch")
-        }
         return true
     }
     //Completed registering for notifications. Store the device token to be saved later
     
     func application( _ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data ) {
-  
-        let token = InstanceID.instanceID().token()
-        print("Salman iphone Token =", token!)
-        deviceTokenString = token!
-        update_token()
+        if checkUserData(){
+            
+        if  let token = InstanceID.instanceID().token() {
+            
+            print("Salman iphone Token =", token)
+            deviceTokenString = token
+            update_token()
+        }
+        }
         
+    }
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        //print("DidFaildRegistration : Device token for push notifications: FAIL -- ")
+        //print(error.localizedDescription)
     }
     func update_token(){
         var parameters = [String:AnyObject]()

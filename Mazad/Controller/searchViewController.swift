@@ -49,8 +49,13 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
             cell?.cityLabel.text = productListArray[indexPath.row]["city"] as? String ?? ""
             cell?.nameLabel.text = productListArray[indexPath.row]["name"] as? String ?? ""
             cell?.userLabel.text = productListArray[indexPath.row]["user"] as? String ?? ""
-            // cell?.productImage.imag = productListArray[indexPath.row]["city"] as? String ?? ""
-            // cell?.productImage.sd_setImage(with: productListArray[indexPath.row]["image"] as? String ?? "", placeholderImage: UIImage(named: "car_icon"))
+            cell?.productImage.layer.cornerRadius = 10
+            
+            cell?.productImage.layer.masksToBounds = true
+            cell?.productImage.layer.borderWidth = 3
+            cell?.productImage.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.productImage.layer.cornerRadius = 20
+            cell?.productImage.contentMode = .scaleAspectFill
             cell?.favouriteIcon.isHidden = true
             
             cell?.productImage.sd_setImage(with: URL(string: productListArray[indexPath.row]["image"] as? String ?? ""), placeholderImage: UIImage(named: "car_icon"))
@@ -194,9 +199,10 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
         var url = base_url + "get_products"
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON{
             (response) in
+            MBProgressHUD.hide(for: self.view,animated:true)
             if let results = response.result.value as? [String:AnyObject]{
                 print(results)
-                MBProgressHUD.hide(for: self.view,animated:true)
+                
                 if  let result = results["products"] as? [[String:AnyObject]] {
                     print(result)
                     if results["status"] as? Bool == true {
@@ -223,6 +229,9 @@ class searchViewController: UIViewController ,UITableViewDataSource, UITableView
                     }
                    
                     self.productTableView.reloadData()
+                }else {
+                    Mazad.toastView(messsage: "عفوا , لا يوجد اعلانات بهذا الاسم", view: self.view)
+                      self.productTableView.reloadData()
                 }
             }
         }

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class categoriesTableViewCell: UITableViewCell {
+import UserNotifications
+class categoriesTableViewCell: UITableViewCell ,UNUserNotificationCenterDelegate {
  
     
     @IBOutlet weak var notification: UISwitch!
@@ -22,6 +22,40 @@ class categoriesTableViewCell: UITableViewCell {
     }
 
     @IBAction func notificationAction(_ sender: Any) {
+        if notification.isOn {
+            print("true")
+            if #available(iOS 10.0, *) {
+                
+                // SETUP FOR NOTIFICATION FOR iOS >= 10.0
+                let center  = UNUserNotificationCenter.current()
+                center.delegate = self
+                center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                    if error == nil{
+                        DispatchQueue.main.async(execute: {
+                            UIApplication.shared.registerForRemoteNotifications()
+                        })
+                    }
+                }
+                
+            } else {
+                
+                // SETUP FOR NOTIFICATION FOR iOS < 10.0
+                
+                let settings = UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil)
+                UIApplication.shared.registerUserNotificationSettings(settings)
+                
+                // This is an asynchronous method to retrieve a Device Token
+                // Callbacks are in AppDelegate.swift
+                // Success = didRegisterForRemoteNotificationsWithDeviceToken
+                // Fail = didFailToRegisterForRemoteNotificationsWithError
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }else{
+            UIApplication.shared.unregisterForRemoteNotifications()
+
+            print("false")
+        }
+       
     }
     @IBOutlet weak var categoryName: UIButton!
     override func setSelected(_ selected: Bool, animated: Bool) {

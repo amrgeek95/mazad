@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Toast
+import UserNotifications
 class SignUpViewController: SuperParentViewController {
 
      @IBOutlet weak var nameText: UITextField!
@@ -79,6 +80,8 @@ class SignUpViewController: SuperParentViewController {
                         print(userData)
                         saveUserData(userData: user_data as [String:AnyObject])
                         userData = user_data
+                       //  application.registerForRemoteNotifications()
+                        self.setNotification()
                         let initialMain = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as? mainViewController
                         self.present(initialMain!, animated: true, completion: nil)
                     }

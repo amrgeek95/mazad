@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-Droid Arabic Kufi.ttf">
+        <array key="ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf">
             <string>DroidArabicKufi</string>
         </array>
         <array key="ArialRoundedMTBold.ttf">
@@ -757,7 +757,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم المستخدم  " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-OT-Ddy">
-                                <rect key="frame" x="20" y="70" width="335" height="30"/>
+                                <rect key="frame" x="20" y="114" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mSY-vM-lai"/>
                                 </constraints>
@@ -766,7 +766,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSL-Dd-AJ8">
-                                <rect key="frame" x="20" y="115" width="335" height="30"/>
+                                <rect key="frame" x="20" y="159" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Jj7-Uh-wzh"/>
                                 </constraints>
@@ -775,7 +775,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqA-Wg-bww">
-                                <rect key="frame" x="93.5" y="170" width="187.5" height="32"/>
+                                <rect key="frame" x="93.5" y="214" width="187.5" height="32"/>
                                 <color key="backgroundColor" red="0.29200774429999998" green="0.73960435390000001" blue="0.85164266820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <state key="normal" title="تسجيل الدخول">
@@ -786,7 +786,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B2-ZM-z56">
-                                <rect key="frame" x="125.5" y="222" width="123" height="41"/>
+                                <rect key="frame" x="125.5" y="266" width="123" height="41"/>
                                 <fontDescription key="fontDescription" name="DroidArabicKufi" family="Droid Arabic Kufi" pointSize="15"/>
                                 <state key="normal" title="نسيت كلمة المرور؟">
                                     <color key="titleColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -796,7 +796,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJN-s9-hJZ">
-                                <rect key="frame" x="124.5" y="273" width="125" height="28"/>
+                                <rect key="frame" x="124.5" y="317" width="125" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="تسجيل عضوية جديدة ؟ ">
                                     <color key="titleColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -806,7 +806,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqc-7w-RSw">
-                                <rect key="frame" x="147" y="311" width="80" height="35"/>
+                                <rect key="frame" x="147" y="355" width="80" height="35"/>
                                 <fontDescription key="fontDescription" name="DroidArabicKufi" family="Droid Arabic Kufi" pointSize="12"/>
                                 <state key="normal" title="الرجوع للرئيسية">
                                     <color key="titleColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -857,7 +857,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    اسم المستخدم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NaT-YW-LBG">
-                                <rect key="frame" x="20" y="65" width="335" height="30"/>
+                                <rect key="frame" x="20" y="109" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EKR-Bi-NbI"/>
                                 </constraints>
@@ -866,19 +866,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    البريد الالكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twS-is-Hj3">
-                                <rect key="frame" x="20" y="115" width="335" height="30"/>
+                                <rect key="frame" x="20" y="159" width="335" height="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="      كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHv-W0-ODd">
-                                <rect key="frame" x="20" y="165" width="335" height="30"/>
+                                <rect key="frame" x="20" y="209" width="335" height="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="    الجوال" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9b3-LZ-eiu">
-                                <rect key="frame" x="20" y="215" width="335" height="30"/>
+                                <rect key="frame" x="20" y="259" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Wpe-L6-4Dv"/>
                                 </constraints>
@@ -887,7 +887,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKB-fo-54M">
-                                <rect key="frame" x="94" y="275" width="187.5" height="30"/>
+                                <rect key="frame" x="94" y="319" width="187.5" height="30"/>
                                 <color key="backgroundColor" red="0.29200774429999998" green="0.73960435390000001" blue="0.85164266820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="التسجيل">
                                     <color key="titleColor" red="1" green="0.98612997889999998" blue="0.99617041989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -897,7 +897,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-QI-OYf">
-                                <rect key="frame" x="140.5" y="329" width="94" height="30"/>
+                                <rect key="frame" x="140.5" y="373" width="94" height="30"/>
                                 <state key="normal" title="تسجيل الدخول">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -906,7 +906,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpF-hZ-vWI">
-                                <rect key="frame" x="140" y="374" width="94" height="30"/>
+                                <rect key="frame" x="140" y="418" width="94" height="30"/>
                                 <state key="normal" title="الرجوع للرئيسية">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2854,7 +2854,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="البريد الالكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="019-Z8-q78">
-                                <rect key="frame" x="20" y="70" width="335" height="30"/>
+                                <rect key="frame" x="20" y="114" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LMd-dy-mt3"/>
                                 </constraints>
@@ -2863,15 +2863,14 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDP-Uw-HU6">
-                                <rect key="frame" x="93.5" y="130" width="187.5" height="32"/>
+                                <rect key="frame" x="93.5" y="174" width="187.5" height="32"/>
                                 <color key="backgroundColor" red="0.29200774429999998" green="0.73960435390000001" blue="0.85164266820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <state key="normal" title="ارسال الي البريد ">
                                     <color key="titleColor" red="1" green="0.98612997889999998" blue="0.99617041989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginBtn:" destination="XYN-m0-bbE" eventType="touchUpInside" id="dL5-U7-qw1"/>
-                                    <segue destination="K1X-c2-gVF" kind="show" id="J6q-6l-71z"/>
+                                    <action selector="signUpBtn:" destination="XYN-m0-bbE" eventType="touchUpInside" id="ZSh-5R-Ke5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2889,12 +2888,13 @@
                     <navigationItem key="navigationItem" id="pnn-S1-7fN"/>
                     <connections>
                         <outlet property="emailText" destination="019-Z8-q78" id="HAS-hY-N98"/>
-                        <outlet property="signBtn" destination="sDP-Uw-HU6" id="QtU-0D-kaI"/>
+                        <outlet property="signup" destination="sDP-Uw-HU6" id="xKg-1u-eXg"/>
+                        <segue destination="K1X-c2-gVF" kind="show" identifier="resetPassword" id="xzP-IS-FWM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENU-bW-gHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2207" y="-4540"/>
+            <point key="canvasLocation" x="-2647" y="-4448"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="fck-3K-ahL">
@@ -2904,8 +2904,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم المستخدم  " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-Lz-4k2">
-                                <rect key="frame" x="20" y="70" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="كود التفعيل" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqK-Lz-4k2">
+                                <rect key="frame" x="20" y="114" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jno-vo-3Bj"/>
                                 </constraints>
@@ -2913,8 +2913,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-T2-4DB">
-                                <rect key="frame" x="20" y="115" width="335" height="30"/>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة المرور الجديدة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-T2-4DB">
+                                <rect key="frame" x="20" y="159" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="K0x-31-pIz"/>
                                 </constraints>
@@ -2923,14 +2923,14 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skI-hp-JSA">
-                                <rect key="frame" x="93.5" y="170" width="187.5" height="32"/>
+                                <rect key="frame" x="93.5" y="214" width="187.5" height="32"/>
                                 <color key="backgroundColor" red="0.29200774429999998" green="0.73960435390000001" blue="0.85164266820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="تسجيل الدخول">
+                                <state key="normal" title="اعادة تعيين كلمة المرور">
                                     <color key="titleColor" red="1" green="0.98612997889999998" blue="0.99617041989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginBtn:" destination="K1X-c2-gVF" eventType="touchUpInside" id="Ckw-5L-VhT"/>
+                                    <action selector="signUpBtn:" destination="K1X-c2-gVF" eventType="touchUpInside" id="Wbe-hf-RoR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2950,9 +2950,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yus-0X-ebQ"/>
                     <connections>
-                        <outlet property="emailText" destination="zqK-Lz-4k2" id="mwc-xf-PzY"/>
-                        <outlet property="passwordText" destination="jdD-T2-4DB" id="6He-tJ-yE3"/>
-                        <outlet property="signBtn" destination="skI-hp-JSA" id="YX8-hh-0ev"/>
+                        <outlet property="code" destination="zqK-Lz-4k2" id="ZRe-Nb-4eb"/>
+                        <outlet property="password" destination="jdD-T2-4DB" id="dl7-cM-Wp0"/>
+                        <outlet property="signup" destination="skI-hp-JSA" id="Pa8-3j-hSe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pB-F6-qzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2992,6 +2992,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="wH6-CU-K0S"/>
         <segue reference="2Qw-Zu-wJn"/>
-        <segue reference="mzo-b8-f8Q"/>
+        <segue reference="jD8-eV-Xqj"/>
     </inferredMetricsTieBreakers>
 </document>
