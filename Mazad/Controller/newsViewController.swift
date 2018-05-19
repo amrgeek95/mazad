@@ -25,10 +25,7 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        newsData  = ["date":"1 min ago",
-                        "title":"huyndai","body":"body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body body","phone":"0101010001"
-        ]
-     
+       
         var like = ""
         var dislike = ""
         self.newsTableView.separatorStyle = .none
@@ -147,14 +144,16 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
                             print(news_data)
                             self.newsData = news_data
                             let title = news_data["name"] as? String ?? ""
-                            let r = title.index(title.startIndex, offsetBy: 0)..<title.index(title.startIndex, offsetBy: 15)
-                            var result = title[r]
-                            
+                           
                             // Access substring from range.
+                            var result = title
                             if title.characters.count > 15 {
+                                let r = title.index(title.startIndex, offsetBy: 0)..<title.index(title.startIndex, offsetBy: 15)
+                                
+                                 result = title[r]
                                result = title[r] + " ... " 
                             }
-                           
+                           print(result)
                             self.navigationItem.title = "\(result) " as String
                             print(results["like"])
                             print(results["dislike"])

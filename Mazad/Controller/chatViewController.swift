@@ -151,6 +151,7 @@ extension chatViewController:UITextFieldDelegate{
 extension chatViewController{
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         print("msgCountcollectionView\(self.messages.count)")
         return self.messages.count
     }
     
@@ -207,6 +208,7 @@ extension chatViewController{
             
             self.sendMsg(msg: messages[messages.count-1].text as AnyObject , type: "text")
             self.inputToolbar.contentView.textView.resignFirstResponder()
+            self.inputToolbar.contentView.textView.text = ""
           
             
             
@@ -268,7 +270,7 @@ extension chatViewController{
                startChat()
             return
             }
-            self.messages.removeAll()
+           
             var parameters:[String:AnyObject] = [String:AnyObject]()
             parameters["user_id"] = userData["id"] as AnyObject?
             parameters["to_id"] = otherId as AnyObject?
@@ -279,6 +281,7 @@ extension chatViewController{
             Alamofire.request(msg_url, method: .post, parameters: parameters).responseJSON{
                 (response) in
                 print("chatResponse\(response)")
+                 self.messages.removeAll()
                 switch response.result {
                 case .success:
                     print("response ygd3an \(response.result.value)")
@@ -292,6 +295,7 @@ extension chatViewController{
                             MBProgressHUD.hide(for: self.view, animated: true)
                             self.collectionView.reloadData()
                             self.automaticallyScrollsToMostRecentMessage = true
+                            print("msgCountApi\(self.messages.count)")
                             self.finishReceivingMessage()
                             
                         }else{
