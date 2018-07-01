@@ -156,11 +156,11 @@ extension UILabel {
             } else if fontNameToTest.range(of: "ultralight") != nil {
                 fontName += "-UltraLight";
             }
-            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 13)
+            self.font = UIFont(name: fontName, size: self.font?.pointSize ?? 11)
         }
     }
 }
-
+/*
 extension UITextView {
     public var substituteFontName : String {
         get {
@@ -182,6 +182,7 @@ extension UITextView {
         }
     }
 }
+*/
 extension String {
     var length: Int {
         return self.characters.count

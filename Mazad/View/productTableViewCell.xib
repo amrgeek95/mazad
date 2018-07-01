@@ -69,6 +69,15 @@
                                     <constraint firstAttribute="height" constant="20" id="NIF-1A-Ttd"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فرصة ذهبية" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-C6-l8w">
+                                <rect key="frame" x="272" y="67.5" width="70" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="ut1-Gu-gJC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.83300481702945661" blue="0.044891928010446835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,7 +93,9 @@
                             <constraint firstItem="eRG-dt-524" firstAttribute="bottom" secondItem="BmW-B7-LoU" secondAttribute="bottom" id="Ucj-0D-VKJ"/>
                             <constraint firstItem="bPz-C3-XB4" firstAttribute="centerY" secondItem="FmR-fi-AkT" secondAttribute="centerY" multiplier="0.75" constant="-10" id="WEq-Ja-KIT"/>
                             <constraint firstItem="Z8p-c7-xPE" firstAttribute="height" secondItem="FmR-fi-AkT" secondAttribute="height" id="WY0-ly-RYi"/>
+                            <constraint firstItem="BmW-B7-LoU" firstAttribute="leading" secondItem="iuf-C6-l8w" secondAttribute="trailing" constant="30" id="YpZ-fN-QDZ"/>
                             <constraint firstItem="Z8p-c7-xPE" firstAttribute="top" secondItem="FmR-fi-AkT" secondAttribute="top" id="Zfm-7R-Sau"/>
+                            <constraint firstItem="iuf-C6-l8w" firstAttribute="centerY" secondItem="BmW-B7-LoU" secondAttribute="centerY" id="bQL-Lk-5bc"/>
                             <constraint firstAttribute="bottom" secondItem="Rqy-L3-37x" secondAttribute="bottom" constant="20" id="kJz-TY-7BV"/>
                             <constraint firstItem="bPz-C3-XB4" firstAttribute="centerX" secondItem="FmR-fi-AkT" secondAttribute="centerX" multiplier="1.2" id="orP-RV-fwL"/>
                             <constraint firstItem="JHT-oQ-Iuu" firstAttribute="bottom" secondItem="eRG-dt-524" secondAttribute="bottom" id="u9d-Lc-zGw"/>
@@ -115,6 +126,6 @@
         <image name="heart_icon" width="25" height="25"/>
         <image name="logo" width="49" height="34"/>
         <image name="marker_icon" width="43" height="46"/>
-        <image name="user_icon" width="30" height="30"/>
+        <image name="user_icon" width="23" height="23"/>
     </resources>
 </document>

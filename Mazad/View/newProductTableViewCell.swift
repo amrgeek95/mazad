@@ -18,10 +18,12 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
     var dropDown = DropDown()
      var dropDown2 = DropDown()
     var dropDown3 = DropDown()
+    var modelDropDown = DropDown()
     var category_id = ""
     var city_id = ""
     var sub_id = ""
     var child_id = ""
+    var model_id = ""
     var checked = false
     var imageArray = [String]()
     
@@ -48,8 +50,11 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
     
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var childrenBtn: UIButton!
+    @IBOutlet weak var modelBtn: UIButton!
     
     @IBOutlet weak var childrenTop: NSLayoutConstraint!
+    
+    @IBOutlet weak var modelTop: NSLayoutConstraint!
     @IBOutlet weak var subBtn: UIButton!
     @IBOutlet weak var imageBtn: UIButton!
     @IBAction func categoryAction(_ sender: Any) {
@@ -67,6 +72,9 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         dropDown3.show()
     }
     
+    @IBAction func modelAction(_ sender: Any) {
+        modelDropDown.show()
+    }
     @IBAction func imageAction(_ sender: Any) {
         let imagePickerController = ImagePickerController()
         imagePickerController.delegate = self
@@ -172,10 +180,13 @@ class newProductTableViewCell: UITableViewCell , ImagePickerDelegate ,UITextView
         if child_id == "" {
             child_id  = dropDown3.selectedItem as? String ?? ""
         }
+        if model_id != "" {
+            parameters["model_id"] = model_id as AnyObject
+        }
         
-    parameters["city_id"] = city_id as AnyObject
+        parameters["city_id"] = city_id as AnyObject
         parameters["subcategory_id"] = sub_id as AnyObject
-          parameters["secondary_id"] = child_id as AnyObject
+        parameters["secondary_id"] = child_id as AnyObject
         parameters["body"] = bodyText.text as AnyObject
         parameters["mobile"] = phoneText.text as AnyObject
         parameters["images"] = imageArray as AnyObject

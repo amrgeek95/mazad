@@ -19,6 +19,7 @@ class imageTableViewCell: UITableViewCell , NYTPhotosViewControllerDelegate{
         super.awakeFromNib()
         // Initialization code
        // containerView.borderRound(border: 0.2, corner: 10)
+        
     }
     func imageBtn(_ sender: Any) {
         

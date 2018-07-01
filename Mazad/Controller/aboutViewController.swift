@@ -37,12 +37,10 @@ class aboutViewController: UIViewController ,UITableViewDelegate,UITableViewData
         if indexPath.row == 0 {
             return 240
         } else if indexPath.row == 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "aboutCell2")
            return 370
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "aboutTextCell")
             
-            return 400
+            return 420
         }
     }
     override func viewDidLoad() {

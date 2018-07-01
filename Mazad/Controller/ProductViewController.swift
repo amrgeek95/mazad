@@ -75,7 +75,7 @@ class ProductViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             
             cell?.containerView.borderRound(border: 1, corner: 40)
             
-            cell?.img.layer.cornerRadius = 30
+            
             
             cell?.img.layer.masksToBounds = true
             cell?.img.layer.borderWidth = 1

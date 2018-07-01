@@ -159,7 +159,15 @@ extension chatViewController{
         let data = self.messages[indexPath.row]
         return data
     }
-    
+    func collectionView(_ collectionView: JSQMessagesCollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
+        
+       // cell.textView!.textColor = UIColor.black
+        var fontName = "DroidArabicKufi-Light";
+        cell.textView.font = UIFont(name: fontName, size: 6)
+        return cell
+    }
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didDeleteMessageAt indexPath: IndexPath!) {
         self.messages.remove(at: indexPath.row)
     }

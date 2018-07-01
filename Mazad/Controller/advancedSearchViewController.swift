@@ -20,7 +20,9 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
     func sideMenuControllerDidReveal(_ sideMenuController: SideMenuController) {
         
     }
-    
+        var years = [String]()
+    var option_array =  [String]()
+    var option_id =  [String]()
     @IBOutlet weak var advancedTableView: UITableView!
     var categoryArray = [Dictionary<String,AnyObject>]()
     var subCategoryArray = [[String]]()
@@ -30,8 +32,8 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
     var cell_height = [CGFloat]()
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print(cell_height[indexPath.row])
-        return cell_height[indexPath.row]
+       
+        return 200
     }
     
     
@@ -42,11 +44,58 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "advancedCell") as? advancedCellTableViewCell
+        var category_parent_name = categoryArray[indexPath.row]["name"] as? String ?? ""
+        //append years if cars category start
+        if category_parent_name.contains("سيارات") {
+        print(category_parent_name)
+            cell?.modelBtn.isHidden = false
+            cell?.model.anchorView = cell?.modelBtn // UIView or UIBarButtonItem
+            cell?.model.dataSource = self.years
+            cell?.modelBtn.setTitle(self.years.first as? String ?? "", for: .normal)
+            cell?.year_id = self.years.first!
+            cell?.model.width = cell?.modelBtn.frame.size.width
+            cell?.model.direction = .any
+            cell?.model.bottomOffset = CGPoint(x: 0, y:(cell?.model.anchorView?.plainView.bounds.height)!)
+            cell?.model.selectionAction = { [unowned self] (index: Int, item: String) in
+                print("Selected item: \(item) at index: \(index)")
+                cell?.modelBtn.setTitle("+\(self.years[index])", for: .normal)
+                self.view.layoutIfNeeded()
+                
+                cell?.year_id = "\(self.years[index])"
+                
+            }
+        }else{
+            cell?.modelBtn.isHidden = true
+        }
+        //append years if cars category end
+        
+        //append cities start
+        if !option_id.isEmpty {
+            
+        
+         
+        cell?.cities.anchorView = cell?.cityBtn // UIView or UIBarButtonItem
+        cell?.cities.dataSource = self.option_array
+        cell?.cityBtn.setTitle(self.option_array.first as? String ?? "", for: .normal)
+        cell?.city_id = self.option_id.first!
+        cell?.cities.width = cell?.cityBtn.frame.size.width
+        cell?.cities.direction = .any
+        cell?.cities.bottomOffset = CGPoint(x: 0, y:(cell?.cities.anchorView?.plainView.bounds.height)!)
+        cell?.cities.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            cell?.cityBtn.setTitle("+\(self.option_array[index])", for: .normal)
+            self.view.layoutIfNeeded()
+           
+            cell?.city_id = "\(self.option_id[index])"
+            
+        }
+        }
+        //append cities end
         cell?.childBtn.isHidden = true
-        cell?.childrenTop.constant = -25
+        cell?.childrenTop.constant = 7
         cell?.containerView.borderRound(border: 0.2, corner: 10)
        cell?.parent = self
-        cell?.categoryLabel.text = categoryArray[indexPath.row]["name"] as? String ?? ""
+        cell?.categoryLabel.text = category_parent_name
         if !subCategoryArray[indexPath.row].isEmpty {
             cell?.dropDown.anchorView = cell?.subBtn // UIView or UIBarButtonItem
             cell?.dropDown.dataSource = self.subCategoryArray[indexPath.row]
@@ -61,8 +110,7 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
                 self.view.layoutIfNeeded()
                 cell?.sub_id = "\(self.subCategoryIdArray[indexPath.row][index_sub])"
                 cell?.childBtn.isHidden = true
-                cell?.childrenTop.constant = -25
-                
+                cell?.childrenTop.constant = 7
                 if let children_exist = self.childrens_array[self.subCategoryIdArray[indexPath.row][index_sub]] as? [String]{
                     if !(self.childrens_array[self.subCategoryIdArray[indexPath.row][index_sub]]?.isEmpty)!{
                         cell?.childrenTop.constant = 7
@@ -99,11 +147,39 @@ class advancedSearchViewController: SuperParentViewController,UITableViewDataSou
         getAllCategory()
         self.navigationItem.title = "بحث متخصص"
         // Do any additional setup after loading the view.
+        for i in (1970..<2019).reversed() {
+            years.append("\(i)")
+        }
+        get_cities()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func get_cities(){
+        self.option_id.removeAll()
+        self.option_array.removeAll()
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        var parameters = [String:AnyObject]()
+        
+        var url = base_url + "cities"
+        Alamofire.request(url, method: .post, parameters: parameters).responseJSON{
+            (response) in
+            if let results = response.result.value as? [String:AnyObject]{
+                print(results)
+                MBProgressHUD.hide(for: self.view,animated:true)
+                if  let result = results["cities"] as? [[String:String]] {
+                    print(result)
+                    for str:[String:String] in result {
+                        print(str)
+                        self.option_array.append(str["name"] as? String ?? "")
+                        self.option_id.append(str["id"] as? String ?? "")
+                    }
+                  
+                }
+            }
+        }
     }
     func getAllCategory(){
         let parameters = [String:AnyObject]()

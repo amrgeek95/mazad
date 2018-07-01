@@ -28,7 +28,7 @@ class SuperParentViewController: UIViewController ,UNUserNotificationCenterDeleg
         self.navigationController?.navigationBar.layer.shadowRadius = 2
         self.navigationController?.navigationBar.tintColor = UIColor.white
         UILabel.appearance().substituteFontName = "DroidArabicKufi"; // USE YOUR FONT NAME INSTEAD
-        UITextView.appearance().substituteFontName = "DroidArabicKufi"; // USE YOUR FONT NAME INSTEAD
+       // UITextView.appearance().substituteFontName = "DroidArabicKufi"; // USE YOUR FONT NAME INSTEAD
         UITextField.appearance().substituteFontName = "DroidArabicKufi";
         
     }

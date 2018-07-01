@@ -12,6 +12,7 @@ import Alamofire
 import MBProgressHUD
 import Toast
 class addProductViewController: SuperParentViewController ,UITableViewDataSource,UITableViewDelegate ,UICollectionViewDelegate ,UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+     var years = [String]()
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return image.count
     }
@@ -54,6 +55,39 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newProductCell") as? newProductTableViewCell
+        
+        
+        //check if the category is سيارات
+        
+        if category_name.contains("سيارات") {
+            
+            cell?.modelTop.constant = 7
+            cell?.modelBtn.isHidden = false
+            cell?.modelDropDown.anchorView = cell?.modelBtn // UIView or UIBarButtonItem
+            cell?.modelDropDown.dataSource = self.years
+            cell?.modelBtn.setTitle(self.years.first as? String ?? "", for: .normal)
+            cell?.model_id = self.years.first!
+            cell?.modelDropDown.width = cell?.modelBtn.frame.size.width
+            cell?.modelDropDown.direction = .any
+            cell?.modelDropDown.bottomOffset = CGPoint(x: 0, y:(cell?.modelDropDown.anchorView?.plainView.bounds.height)!)
+            cell?.modelDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                print("Selected item: \(item) at index: \(index)")
+                cell?.modelBtn.setTitle("+\(self.years[index])", for: .normal)
+                self.view.layoutIfNeeded()
+                cell?.child_id = "\(self.years[index])"
+                //append child dropdown
+                print("\(self.years[index])")
+                
+            }
+        }
+        else{
+            cell?.modelBtn.isHidden = true
+            cell?.modelTop.constant = -20
+            //  self.productTableView.reloadData()
+            
+        }
+        //end
+        
         if !option_array.isEmpty {
             cell?.imageCollectionView.delegate = self
             cell?.imageCollectionView.dataSource = self
@@ -103,6 +137,8 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
                 print("\(self.sub_id[index_sub])")
                 
                 cell?.sub_id = "\(self.sub_id[index_sub])"
+               
+                // check if subcategory has another sub category
                 if let children_exist = self.childrens_array[self.sub_id[index_sub]] as? [String]{
                     if !(self.childrens_array[self.sub_id[index_sub]]?.isEmpty)!{
                         cell?.childrenTop.constant = 7
@@ -139,7 +175,6 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
       
         cell?.phoneText.setBottomBorder()
         cell?.titleText.setBottomBorder()
-      //  cell?.bodyText.borderRound(border: 0.8, corner: 10)
         cell?.submitBtn.borderRoundradius(radius: 10)
         cell?.parent = self
         cell?.category_id = category_id
@@ -153,7 +188,7 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
     
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 800
+        return 820
     }
     @IBOutlet weak var productTableView: UITableView!
     
@@ -169,6 +204,9 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
         
         
         dictionary["3"] = ["1","2","3"]
+        for i in (1970..<2019).reversed() {
+            years.append("\(i)")
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -220,9 +258,10 @@ class addProductViewController: SuperParentViewController ,UITableViewDataSource
         var url = base_url + "get_subcategory"
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON{
             (response) in
+             MBProgressHUD.hide(for: self.view,animated:true)
             if let results = response.result.value as? [String:AnyObject]{
                 print(results)
-                MBProgressHUD.hide(for: self.view,animated:true)
+               
                 if  let result = results["subcategories"] as? [[String:AnyObject]] {
                     
                     for str:[String:AnyObject] in result {

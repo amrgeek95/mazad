@@ -11,14 +11,22 @@ import SideMenuController
 import Alamofire
 import MBProgressHUD
 import Toast
-class homeViewController: SuperParentViewController ,UITableViewDelegate,UITableViewDataSource{
+class homeViewController: SuperParentViewController ,UITableViewDelegate,UITableViewDataSource , sendSearchData{
     
     
     @IBOutlet weak var leftBtnItem: UIBarButtonItem!
     var category_id = ""
     var selected_index:Int!
+    var city_id = ""
+    var model_id = ""
    
     @IBAction func leftBtnAction(_ sender: Any) {
+        
+    }
+    func sendData(city_id: String, year_id: String) {
+        self.city_id = city_id
+        self.model_id = year_id
+        print("year Selected \(model_id)")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        print(productListArray.count)
@@ -134,6 +142,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         productListArray.removeAll()
+    
         let nib = UINib.init(nibName: "productTableViewCell", bundle: nil)
         self.productTableView.register(nib, forCellReuseIdentifier: "productTableViewCell")
         
@@ -141,7 +150,7 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
         // Do any additional setup after loading the view.
  
         let button =  UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         
         let imagebar = UIImage(named: "24_icon")
         button.imageView?.contentMode = UIViewContentMode.scaleAspectFit
@@ -183,19 +192,19 @@ class homeViewController: SuperParentViewController ,UITableViewDelegate,UITable
         if checkUserData() == true {
             print(checkUserData())
             
-            button.frame = CGRect(x: 0.0, y: 0.0, width: 80, height: 50)
+            button.frame = CGRect(x: 0.0, y: 0.0, width: 80, height: 40)
             button.setImage(UIImage(named: "user_icon")?.withRenderingMode(.alwaysTemplate), for: .normal)
             
-            button.imageView?.contentMode = .scaleToFill
+            button.imageView?.contentMode = .scaleAspectFit
             button.setTitle(userData["name"] as? String ?? "", for: .normal)
             button.addTarget(self, action: #selector(self.showProfile(sender:)), for: .touchUpInside)
             
         } else {
             
-            button.frame = CGRect(x: 0.0, y: 0.0, width: 60, height: 35)
+            button.frame = CGRect(x: 0.0, y: 0.0, width: 50, height: 35)
             button.setImage(UIImage(named: "new_user_icon")?.withRenderingMode(.alwaysTemplate), for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
-            button.sizeThatFits(CGSize(width: 45, height: 30))
+            button.sizeThatFits(CGSize(width: 40, height: 30))
             //button.sizeToFit()
             button.addTarget(self, action: #selector(self.loginAction), for: .touchUpInside)
             
@@ -254,6 +263,12 @@ extension homeViewController{
             if secondary_id != "" {
                 parameters["secondary_id"] = secondary_id as AnyObject
             }
+        }
+        if city_id != "" {
+            parameters["city_id"] = self.city_id as AnyObject
+        }
+        if model_id != "" {
+            parameters["model_id"] = self.city_id as AnyObject
         }
        
         

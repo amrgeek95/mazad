@@ -9,22 +9,7 @@ func saveUserData(userData : [String:AnyObject]) {
     
     UserDefaults.standard.synchronize()
 }
-func saveSegue(data : Bool,name:String , stingData:String = "") {
-    let encodedData = NSKeyedArchiver.archivedData(withRootObject: userData)
-    if stingData != "" {
-        UserDefaults.standard.set(stingData, forKey: name)
-    }else{
-        UserDefaults.standard.set(data, forKey: name)
-    }
-    
-    
-    UserDefaults.standard.synchronize()
-}
-func removeSegue(name:String){
-    let defaults: UserDefaults = UserDefaults.standard
-    defaults.removeObject(forKey:name)
-    defaults.synchronize()
-}
+
 func loadUserData() ->AnyObject {
     
     // retrieving a value for a key
@@ -62,5 +47,22 @@ func checkUserData () ->Bool {
 func removeUserData(){
     let defaults: UserDefaults = UserDefaults.standard
     defaults.removeObject(forKey: "userData")
+    defaults.synchronize()
+}
+
+func saveSegue(data : Bool,name:String , stingData:String = "") {
+    let encodedData = NSKeyedArchiver.archivedData(withRootObject: userData)
+    if stingData != "" {
+        UserDefaults.standard.set(stingData, forKey: name)
+    }else{
+        UserDefaults.standard.set(data, forKey: name)
+    }
+    
+    
+    UserDefaults.standard.synchronize()
+}
+func removeSegue(name:String){
+    let defaults: UserDefaults = UserDefaults.standard
+    defaults.removeObject(forKey:name)
     defaults.synchronize()
 }

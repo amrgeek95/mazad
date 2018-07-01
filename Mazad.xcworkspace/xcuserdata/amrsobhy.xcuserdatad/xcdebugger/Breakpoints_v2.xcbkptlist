@@ -25,54 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548295406.551317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548295406.551944"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mazad/Controller/addProductViewController.swift"
-            timestampString = "548295406.552174"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Mazad/View/categoriesTableViewCell.swift"
             timestampString = "548345686.146916"
             startingColumnNumber = "9223372036854775807"
@@ -89,8 +41,8 @@
                   symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
                   moduleName = "Mazad"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
-                  timestampString = "548413630.605651"
+                  urlString = "file:///Volumes/A&amp;N%20mac/Users/amr/Desktop/Projects1/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "552176951.685166"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -104,8 +56,8 @@
                   symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
                   moduleName = "Mazad"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
-                  timestampString = "548413630.608382"
+                  urlString = "file:///Volumes/A&amp;N%20mac/Users/amr/Desktop/Projects1/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "552176951.689173"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -153,8 +105,8 @@
                   symbolName = "Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
                   moduleName = "Mazad"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
-                  timestampString = "548413630.620762"
+                  urlString = "file:///Volumes/A&amp;N%20mac/Users/amr/Desktop/Projects1/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "552176951.70534"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -168,8 +120,8 @@
                   symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Mazad.categoriesTableViewCell.notificationAction(Any) -&gt; ()"
                   moduleName = "Mazad"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrsobhy/Downloads/Projects/Mazad/Mazad/View/categoriesTableViewCell.swift"
-                  timestampString = "548413630.624263"
+                  urlString = "file:///Volumes/A&amp;N%20mac/Users/amr/Desktop/Projects1/Mazad/Mazad/View/categoriesTableViewCell.swift"
+                  timestampString = "552176951.7094181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -177,6 +129,70 @@
                   offsetFromSymbolStart = "28">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazad/View/advancedCellTableViewCell.swift"
+            timestampString = "549292797.211615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "searchAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazad/Controller/chatViewController.swift"
+            timestampString = "549887846.235818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
+            landmarkName = "startChat()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazad/Controller/chatViewController.swift"
+            timestampString = "549887846.236431"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazad/AppDelegate.swift"
+            timestampString = "550841639.603652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

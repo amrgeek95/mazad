@@ -27,6 +27,29 @@ class settingViewController: SuperParentViewController ,UITableViewDataSource , 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                let shareText = "حمل تطبيق مزاد"
+                let urlshare = URL (string: "https://itunes.apple.com/app/id1379913224" as! String)
+                 //check ipad
+                let activityViewController = UIActivityViewController(activityItems: [urlshare], applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = self.view
+                activityViewController.popoverPresentationController?.sourceRect = CGRect(x: self.view.layer.bounds.width * 0.3,y: self.view.layer.bounds.height * 0.5,width: 0.00, height: 0.0)
+                self.present(activityViewController, animated: true, completion: nil)
+            }else if indexPath.row == 1 {
+                if let url = URL(string: "itms-apps://itunes.apple.com/app/id1379913224"),
+                    UIApplication.shared.canOpenURL(url)
+                {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    } else {
+                        UIApplication.shared.openURL(url)
+                    }
+                }
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             
@@ -72,10 +95,7 @@ class settingViewController: SuperParentViewController ,UITableViewDataSource , 
             popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
             popoverController.permittedArrowDirections = []
         }
-        
         self.present(alertController, animated: true, completion: nil)
-        
-        
     }
     func deleteFavourite(sender:UIButton){
         let alertController = UIAlertController(title: nil, message: "هل انت متاكد من مسح المفضلة", preferredStyle: .actionSheet)

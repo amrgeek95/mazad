@@ -298,8 +298,7 @@
 		2FC702562090D35400D1E92A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF28E120AF0B3F0078B132 /* resetPasswordViewController.swift */,
-				2FEF28E020AF0B3F0078B132 /* verificationViewController.swift */,
+				2FFF136B20AC143700D8F878 /* aboutViewController.swift */,
 				2F5ED38E209110A700E4B829 /* addProductViewController.swift */,
 				2FA1925520A7E21800F3B175 /* advancedSearchViewController.swift */,
 				2F5ED390209110B700E4B829 /* categoriesViewController.swift */,
@@ -317,6 +316,7 @@
 				2F8FD10E20A0C80D0039F3DA /* parentChatViewController.swift */,
 				2FB7FEDF2091DA4400B39CFC /* preLoginViewController.swift */,
 				2F41C3C32095F459007AA346 /* ProductViewController.swift */,
+				2FEF28E120AF0B3F0078B132 /* resetPasswordViewController.swift */,
 				2F9B04382093713E000F7E86 /* searchViewController.swift */,
 				2F41C3D3209664A4007AA346 /* settingViewController.swift */,
 				2FC7025B2090D3C500D1E92A /* SignUpViewController.swift */,
@@ -324,7 +324,7 @@
 				2FC7025E2090D3C500D1E92A /* SuperParentTableViewController.swift */,
 				2FC7025C2090D3C500D1E92A /* SuperParentViewController.swift */,
 				2F74E60620A1495400AFA1A7 /* usersChatViewController.swift */,
-				2FFF136B20AC143700D8F878 /* aboutViewController.swift */,
+				2FEF28E020AF0B3F0078B132 /* verificationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

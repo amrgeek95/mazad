@@ -112,7 +112,7 @@ class newsViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         let controller = LightboxController(images: imagelightbox)
         
         controller.dynamicBackground = true
-        
+          LightboxConfig.CloseButton.text = "اغلاق"
         
         present(controller, animated: true, completion: nil)
     }
